@@ -4,6 +4,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 460px) {
+  html {
+    font-size: 5px;
+  }
+}
+
 /* Base reset */
 * {
   margin: 0;
