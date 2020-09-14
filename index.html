@@ -1,37 +1,321 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178006499-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178006499-1');
+    </script>
+
     <meta charset="utf-8">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="css_file.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
-      rel="stylesheet"/>
+    <title>Edward's Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   </head>
+
   <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-      <ul class="nav-list">
-        <li>
-          <a href="#blogs">Blogs</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Welcome section -->
-    <div id="welcome-section">
-      <h1>Under Construction.</h1>
+    <div class="loading-screen" id="loading">
+      <div class="terminal">
+        <i class="fas fa-terminal"></i>
+        <div class="terminal-line"></div>
+      </div>
+      <div class="loading">
+        <div class="loading-animation">
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+        </div>
+        <h1 class="loading-text">welcome.toMyPage();</h1>
+      </div>
     </div>
+    <main id="main">
+      <nav id="navbar">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div id="about">
+        <div class="about-main">
+          <div class="identity">
+            <h1>
+              <div class="name">I'm Edward Junior P T</div>
+              <div class="about-hide">
+                <div class="my-picture">
+                  <img src="me.jpg" class="me" alt="My Picture">
+                  <p>Use my mask for safety :)</p>
+                </div>
+                <h2 class="hello">HELLO</h2>
+                <div class="physics-formula">
+                  E = mc<span>2</span>
+                </div>
+              </div>
+            </h1>
+          </div>
+          <h4>A final year Physics student at Universitas Gadjah Mada</h4>
+          <h4>I'm a Web Developer and this is my portfolio</h4>
+          <div class="about-icons">
+            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-radiation"></i>
+          </div>
+        </div>
+        <div class="about-bottom"></div>
+      </div>
+      <div id="skills">
+        <div class="skills-title">
+          <h1>SKILLS</h1>
+          <p>you can hover to each point ;)</p>
+        </div>
+        <div class="skills-section">
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill skill-html">
+              <div class="html-effect-left"><</div>
+              HTML
+              <div class="html-effect">><</div><div class="html-effect">/HTML></div>
+            </h2>
+            <h2 class="skill skill-bootstrap">
+              Bootstrap
+              <div class="bootstrap-effect">
+                Thanks Twitter for making life easier.
+              </div>
+            </h2>
+            <h2 class="skill skill-react">
+              ReactJS
+              <div class="react-effect">
+                < I am JSX! not HTML />
+              </div>
+            </h2>
+            <h2 class="skill skill-js">
+              Javascript
+              <div class="js-effect">
+                console.log("Hello <strike>world</strike> Employer.")
+              </div>
+            </h2>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill2 skill-css">
+              CSS
+              <div class="css-effect">
+                She's good at making me handsome.
+              </div>
+            </h2>
+            <h2 class="skill2 skill-sass">
+              Sass
+              <div class="sass-effect">
+                CSS but I { can do { this and } else }
+              </div>
+            </h2>
+            <h2 class="skill2 skill-redux">
+              Redux
+              <div class="redux-effect">
+                I'm the manager of frameworks.
+              </div>
+            </h2>
+            <h2 class="skill2">
+              Python
+              <div class="python-effect">
+                I use Python for scripting task.
+              </div>
+            </h2>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill skill-git">
+              Git
+              <div class="git-effect">
+                git commit -m "Portfolio final fix!"
+                <div class="git">
+                  <i class="fas fa-code-branch"></i>
+                </div>
+              </div>
+            </h2>
+            <h2 class="skill">NodeJS and NPM</h2>
+            <h2 class="skill skill-corel">
+              Corel Draw
+              <div class="corel-effect">
+                <i class="fas fa-palette"></i>
+              </div>
+            </h2>
+            <h3 class="inprogress">
+              Special mention
+              <div class="skills-inprogress">
+                <h2>ExpressJS</h2>
+                <h2>MongoDB</h2>
+                <p>*No hands on project yet.</p>
+                <p>#FutureFullstackDev B-)</p>
+              </div>
+            </h3>
+          </div>
+        </div>
+        <div class="skills-bottom"></div>
+      </div>
+      <div id="projects">
+        <h1 class="projects-title">Projects</h1>
+        <div class="horizontal-line-projects"></div>
+        <div class="projects-section">
+          <div id="arrow-left" class="arrow"></div>
+          <div class="slider">
+            <div class="slide">
+              <div class="project">
+                Satu
+              </div>
+              <div class="project">
+              </div>
+              <div class="project">
+              </div>
+            </div>
+            <div class="slide">
+              <div class="project">
+              </div>
+              <div class="project">
+                2
+              </div>
+              <div class="project">
+              </div>
+            </div>
+            <div class="slide">
+              <div class="project">
+              </div>
+              <div class="project">
+              </div>
+              <div class="project">
+                3
+              </div>
+            </div>
+            <div class="slide">
+              <div class="project">
+              </div>
+              <div class="project">
+                4
+              </div>
+              <div class="projects3 project">
+              </div>
+            </div>
+          </div>
+          <div id="arrow-right" class="arrow"></div>
+        </div>
+      </div>
+      <div id="experiences">
+        <div class="organization">
+          <h1>Organization</h1>
+          <div class="horizontal-line"></div>
+          <div class="organization-exp">
+            <div class="organization-exp-icons">
+              <i class="fas fa-users"></i>
+              <i class="fas fa-people-carry"></i>
+            </div>
+            <ul>
+              <li>
+                Head of Organization - PMK MIPA 2019
+                <p>I led an organization consists of 18 people that divided into 3 divisions. PMK MIPA is a Christian religous organization in faculty level at FMIPA UGM. I was resposible to lead, help, and manage the members so the organization can run and execute all the programs and serve the Christian students in the faculty. And also at the same time prepare the next generation to lead and manage the organization.</p>
+              </li>
+              <li>
+                Head of Event - Retreat - PMK MIPA March 2019
+                <p>I led 21 people that divided into 7 divisions to organize an event called Retreat. It's one of the yearly programs of PMK MIPA UGM where we held an event to welcome the first year student and also doing a spiritual retreat into a place in Yogyakarta. In 2019 we went to Omah Jawi Kaliurang and had 60 participants.</p>
+              </li>
+              <li>
+                Head of Division - Division of Internal-External - PMK MIPA 2018
+                <p>I led a division that consists of 4 people including me. I was resposible to manage the secretariat office, the social media, and also manage the relationship with other organization.</p>
+              </li>
+              <li>
+                Head of Division - Division of Writing - Media and Information Ministry BEM KM FMIPA UGM 2018
+                <p>I led a division consists of 6 people including me. I was resposible to ensuring all the writing that comes out of the organization doesn't have any spelling, grammar, and punctuation error, and also doing editing so the text becomes more readable. I also helped the minister to run the programs of the ministry, such as KosMa, and LipMip.</p>
+              </li>
+              <li>
+                Secretary - Donor Darah MIPA (DoRaMi) October 2018
+                <p>I was resposible to help the head of the event in organising meetings, maintaining effective records and administration, and help the division of public relation in communication and correspondence with outside parties such as UPTD RS dr. Sardjito.</p>
+              </li>
+              <li>
+                Staff - Division of Writing - Media and Information Departement BEM KM FMIPA UGM 2016/2017
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="work">
+          <h1>Work</h1>
+          <div class="horizontal-line"></div>
+          <div class="work-exp">
+            <div class="work-exp-icons">
+              <i class="fas fa-charging-station"></i>
+              <i class="fas fa-vial"></i>
+            </div>
+            <ul>
+              <li>
+                Student Laboratory Assistant of Physics Laboratory - FMIPA UGM
+                <br><span>Experiment of Internal Resistance</span>
+                <p>I helped first year student of Engineering Faculty to perform experiment about how to measure the internal resistance of batteries. My responsibilities are, demontrate how to perform the experiment, doing pretest to the student, guiding student through the experiment, explaining how to make the report including how to analyze and process the data, and also grading the report.</p>
+              </li>
+              <li>
+                Student Laboratory Assistant of Physics Laboratory - FMIPA UGM
+                <br><span>Experiment of Surface Tension</span>
+                <p>I helped first year student of Animal Science Faculty to perform experiment about how to measure the surface tension of liquid. I had the same responsibilities as above.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <div class="contact-upper">
+          <h1>I can help.</h1>
+          <h3>I'm currently available for work.</h3>
+          <p>If you're currently looking for a Web developer and you think I'm good enough for the position. I'll be very happy to help you!</p>
+          <div class="email-phone">
+            <div class="email-contact">
+              <button id="show-email" class="ep_contact">
+                <i class="far fa-envelope"></i> email me
+              </button>
+            </div>
+            <div class="phone-contact">
+              <button id="show-number" class="ep_contact">
+                <i class="fas fa-phone"></i> call me
+              </button>
+            </div>
+          </div>
+          <div class="contact-container">
+            <div class="contact-address email">
+              <a href="mailto:edwardjptatuhas@gmail.com"
+                class="address-icon">
+                <i class="fas fa-at"></i>
+              </a>
+              <div class="email_string">edwardjptatuhas@gmail.com</div>
+              <button id="copy-email" class="address-icon">
+                <i class="fas fa-clone"></i>
+              </button>
+            </div>
+            <div class="contact-address number">
+              <a href="tel:+6292299454118"
+                class="address-icon">
+                <i class="fas fa-phone-volume"></i>
+              </a>
+              <div class="number_string">+6282299454118</div>
+              <button id="copy-number" class="address-icon">
+                <i class="fas fa-clone"></i>
+              </button>
+            </div>
+            <p id="copied">Copied to clipboard!</p>
+          </div>
+        </div>
+        <div class="contact-bottom"></div>
+      </div>
+    </main>
 
-    <div id="blogs">
-
-    </div>
-
-    <div id="about">
-
-    </div>
+    <script src="main.js"></script>
   </body>
 </html>
