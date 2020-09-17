@@ -477,6 +477,48 @@ nav ul a:hover {
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  flex-direction: column;
+  border: solid 5px var(--dark-blue);
+}
+
+.slide-upper {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  object-fit: cover;
+  width: 70%;
+  display: block;
+  height: auto;
+}
+
+.slide-lower {
+  height: 15%;
+  width: 100%;
+  background-color: blue;
+  font-size: 23.5px;
+  padding: 20px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.code {
+  transition: color 0.3s ease-out;
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+
+.project:hover .code {
+  display: block;
 }
 
 #experiences {
@@ -812,5 +854,9 @@ button:focus { outline: 0; }
 .toggle .line3 { transform: rotate(45deg) translate(-8px, -6px); }
 
 @media screen and (max-width: 500px) {
-  .email-phone { justify-content: space-between; }
+  .email-phone {
+    justify-content: space-around;
+    width: 100%;
+  }
 }
+
