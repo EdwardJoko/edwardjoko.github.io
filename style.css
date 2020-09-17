@@ -321,9 +321,7 @@ nav ul a:hover {
   font-size: 17.5px;
 }
 
-.section h3:hover > .skills-inprogress {
-  display: block;
-}
+.section h3:hover > .skills-inprogress { display: block; }
 
 .skill2 {
   font-size: 32.5px;
@@ -575,8 +573,9 @@ nav ul a:hover {
   height: 95vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 15vh;
   font-family: 'Ubuntu', sans-serif;
   color: white;
 }
@@ -627,6 +626,11 @@ nav ul a:hover {
 
 .ep_contact i { font-size: 35px; }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-address {
   background-color: white;
   color: var(--dark-blue);
@@ -661,10 +665,8 @@ nav ul a:hover {
 }
 
 #copied {
-  position: absolute;
-  left: 675px;
-  top: 517vh;
   display: none;
+  margin: 1% auto;
 }
 
 button {
@@ -711,13 +713,7 @@ button:focus { outline: 0; }
   
   .css-effect { left: 60px; }
 
-  .email-phone {
-    justify-content: space-between;
-    width: 50%;
-  }
-
-  #copied { left: 550px; }
-
+  .email-phone { width: 75%; }
 }
 
 @media screen and (max-width: 950px) {
@@ -749,17 +745,10 @@ button:focus { outline: 0; }
   .git-effect { display: none; }
 
   #experiences { height: 130vh; }
-
-  #copied {
-    top: 527.5vh;
-    left: 500px;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .organization-exp-icons { display: none; }
-
-  #copied { left: 450px; }
 }
 
 @media screen and (max-width: 800px) {
@@ -769,10 +758,7 @@ button:focus { outline: 0; }
 
   .loading { margin-left: 100px; }
 
-  #copied {
-    left: 390px;
-    font-size: 20px;
-  }
+  .contact-upper p { width: 90%; }
 
   /* For the navbar in small screen */
   nav {
@@ -824,3 +810,7 @@ button:focus { outline: 0; }
 .toggle .line1 { transform: rotate(-45deg) translate(-8px, 6px); }
 .toggle .line2 { opacity: 0; }
 .toggle .line3 { transform: rotate(45deg) translate(-8px, -6px); }
+
+@media screen and (max-width: 500px) {
+  .email-phone { justify-content: space-between; }
+}
