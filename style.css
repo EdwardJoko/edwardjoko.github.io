@@ -478,7 +478,7 @@ nav ul a:hover {
   align-items: center;
   font-size: 40px;
   flex-direction: column;
-  border: solid 5px var(--dark-blue);
+  border: solid 2.5px var(--main-blue);
 }
 
 .slide-upper {
@@ -487,6 +487,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid 15px var(--dark-blue);
 }
 
 .project-image {
@@ -499,7 +500,7 @@ nav ul a:hover {
 .slide-lower {
   height: 15%;
   width: 100%;
-  background-color: blue;
+  background-color: var(--dark-blue);
   font-size: 23.5px;
   padding: 20px 5px;
   display: flex;
