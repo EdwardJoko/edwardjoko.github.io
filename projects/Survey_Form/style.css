@@ -35,13 +35,9 @@ body::before {
   color: white;
 }
 
-header {
-  text-align: center;
-}
+header { text-align: center; }
 
-header p {
-  margin-top: 15px;
-}
+header p { margin-top: 15px; }
 
 main {
   background-color: rgba(22, 52, 100, 0.5);
@@ -137,11 +133,7 @@ footer a { color: white; }
     margin-bottom: 30px;
   }
 
-  form {
-    font-size: 17.5px;
-  }
+  form { font-size: 17.5px; }
 
-  .form-group-text textarea {
-    font-size: 15px;
-  }
+  .form-group-text textarea { font-size: 15px; }
 }

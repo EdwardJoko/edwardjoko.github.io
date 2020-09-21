@@ -62,9 +62,7 @@ main {
   padding: 15px 60px;
 }
 
-section {
-  margin: 30px 0;
-}
+section { margin: 30px 0; }
 
 section .title {
   font-size: 29px;
@@ -78,17 +76,11 @@ section .title {
   font-size: 16px;
 }
 
-.description p {
-  margin: 20px 0;
-}
+.description p {  margin: 20px 0; }
 
-.description ul {
-  margin-left: 50px;
-}
+.description ul { margin-left: 50px; }
 
-.description ul li {
-  margin: 20px 0;
-}
+.description ul li { margin: 20px 0; }
 
 .code {
   margin: 10px 0 10px 20px;
@@ -100,9 +92,7 @@ section .title {
 }
 
 @media screen and (max-width: 1100px) {
-  nav header {
-    font-size: 16px;
-  }
+  nav header { font-size: 16px; }
 }
 
 @media screen and (max-width: 900px) {
@@ -110,19 +100,21 @@ section .title {
     display: flex;
     flex-direction: column;
   }
+
   nav {
     position: static;
     height: 40vh;
     width: 100%;
   }
+
   nav header {
     height: 25%;
     font-size: 18px;
     padding: 20px 0;
   }
-  nav ul {
-    height: 75%;
-  }
+
+  nav ul { height: 75%; }
+  
   main {
     width: 85vw;
     margin-left: 0;
@@ -131,22 +123,15 @@ section .title {
 }
 
 @media screen and (max-width: 600px) {
-  main {
-    padding: 15px 0 15px 40px;
-  }
-  section {
-    width: 100%;
-  }
-  section .title {
-    font-size: 22px;
-  }
-  .description {
-    margin-left: 0;
-  }
-  .description ul {
-    margin-left: 20px;
-  }
-  .code {
-    margin-left: 0;
-  }
+  main { padding: 15px 0 15px 40px; }
+  
+  section { width: 100%; }
+  
+  section .title { font-size: 22px; }
+
+  .description { margin-left: 0; }
+
+  .description ul { margin-left: 20px; }
+
+  .code { margin-left: 0; }
 }
