@@ -468,6 +468,8 @@ nav ul a:hover {
   transition: transform 0.55s ease-in-out;
 }
 
+.slide a { text-decoration: none; }
+
 .project {
   height: 90%;
   width: 33%;
@@ -565,7 +567,7 @@ nav ul a:hover {
 .organization-exp ul li:hover > p,
 .work-exp ul li:hover > p {
   background-color: var(--dark-blue);
-  color: var(--main-blue);
+  color: lightblue);
 }
 
 .organization-exp ul li p,
