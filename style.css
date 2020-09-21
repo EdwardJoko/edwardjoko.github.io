@@ -508,7 +508,6 @@ nav ul a:hover {
   align-items: center;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
 }
 
 .code {
@@ -523,7 +522,7 @@ nav ul a:hover {
 }
 
 #experiences {
-  background-color: lightblue;
+  background-color: var(--main-blue);
   height: 120vh;
   padding-top: 5vh;
   font-family: 'Montserrat', sans-serif;
