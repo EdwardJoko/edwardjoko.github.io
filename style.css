@@ -505,7 +505,7 @@ nav ul a:hover {
   height: 70%;
   width: 30%;
   padding: 20px;
-  font-size: 21px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   color: white;
   display: none;
@@ -559,7 +559,7 @@ nav ul a:hover {
 
 .better-code:hover { background-color: var(--main-blue); }
 
-.better-code:hover > i { transform: translateX(2px); }
+.better-code:hover > i { transform: translateX(6px); }
 
 .better-code > i {
   margin-left: 10px;
@@ -605,13 +605,14 @@ nav ul a:hover {
 .work-exp ul li:hover {
   background-color: var(--dark-blue);
   color: white;
+  font-weight: bold;
 }
 
 
 .organization-exp ul li:hover > p,
 .work-exp ul li:hover > p {
   background-color: var(--dark-blue);
-  color: lightblue);
+  font-weight: normal;
 }
 
 .organization-exp ul li p,
@@ -709,6 +710,8 @@ nav ul a:hover {
   font-weight: bold;
   text-decoration: none;
 }
+
+#show-number i { font-size: 40px; }
 
 .ep_contact:hover { background-color: lightblue; }
 
