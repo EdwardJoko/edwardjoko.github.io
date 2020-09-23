@@ -830,6 +830,7 @@ button:focus { outline: 0; }
   }
 
   /* delete the effect of hover in small screen */
+  .skills-title p { display: none; }
   .html-effect { display: none; }
   .section .skill-html:hover > .html-effect-left { display: none; }
   .section .skill-html:hover > .html-effect { opacity: 0; }
@@ -1058,6 +1059,11 @@ button:focus { outline: 0; }
   .email-phone {
     justify-content: space-around;
     width: 100%;
+  }
+
+  .contact-address {
+    font-size: 19px;
+    width: 345px;
   }
 }
 

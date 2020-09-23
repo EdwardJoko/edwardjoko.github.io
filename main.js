@@ -152,7 +152,7 @@ function navSlide() {
 
 
 // Run the all functions
-const app() {
+const app = () => {
   showMain();
   removeLoadingDiv();
   startSlide();
