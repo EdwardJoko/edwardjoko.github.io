@@ -520,6 +520,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
@@ -543,10 +544,12 @@ nav ul a:hover {
   justify-content: center;
   align-items: center;
   margin-top: -5vh;
-  color: var(--dark-blue);
 }
 
-.project-bottom a { text-decoration: none; }
+.project-bottom a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
 
 .better-code {
   padding: 10px 20px;
@@ -833,6 +836,7 @@ button:focus { outline: 0; }
   .bootstrap-effect, .react-effect, .js-effect { display: none; }
   .section .skill2:hover > .css-effect { display: none; }
   .sass-effect, .redux-effect, .python-effect { display: none; }
+  .corel-effect { display: none; }
   .git-effect { display: none; }
 
   #experiences { height: 130vh; }
@@ -840,6 +844,8 @@ button:focus { outline: 0; }
 
 @media screen and (max-width: 900px) {
   .organization-exp-icons { display: none; }
+
+  .slide-lower { font-size: 20px; }
 }
 
 @media screen and (max-width: 800px) {
@@ -870,7 +876,7 @@ button:focus { outline: 0; }
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   .nav-links li { opacity: 0; }
@@ -880,7 +886,9 @@ button:focus { outline: 0; }
     cursor: pointer;
     position: relative;
     margin: 15px;
-  } 
+  }
+
+  #experiences { height: 150vh; }
 }                                                
                                                  
 /* For the navbar in small screen */
@@ -902,7 +910,151 @@ button:focus { outline: 0; }
 .toggle .line2 { opacity: 0; }
 .toggle .line3 { transform: rotate(45deg) translate(-8px, -6px); }
 
+
+@media screen and (max-width: 700px) {
+  .skills-title { padding-top: 12.5vh; }
+
+  .skills-section {
+    flex-direction: column;
+    padding-left: 12.5vw;
+    padding-top: 2.5vh;
+    height: 100%;
+  }
+
+  .vertical-line { display: none; }
+
+  .skill, .skill2 {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .inprogress { display: none; }
+
+  .project-expl { font-size: 14px; }
+  
+  .work { margin-left: 5vw; }
+  
+  .work-exp-icons { display: none; }
+}
+
+@media screen and (max-width: 650px) {
+  .loading {           
+    margin-top: 70vh; 
+    margin-left: 10vw;
+  }
+  
+  .loading-text { font-size: 27.5px; }
+
+  .terminal {
+    font-size: 30px;
+    top: 60vh;
+    left: 10vw;
+  }
+
+  .terminal-line { display: none; }
+
+  .about-main {       
+    padding-top: 15vh;
+    padding-left: 5vw;
+  }
+
+  .about-main .name {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .about-main h4 { font-size: 15px; }
+  .about-icons { font-size: 35px; }
+  .about-hide { display: block; }
+  .my-picture { display: none; }
+  .physics-formula { display: none; }
+
+  .hello {
+    font-size: 50px;
+    position: absolute;
+    left: 50vw;
+    top: 83vh;
+  }
+
+  #projects { height: 245vh; }
+
+  .horizontal-line-projects { top: -175px; }
+
+  .slide {
+    flex-direction: column;
+    top: 272.5vh;
+  }
+
+  .project {
+    height: 410px;
+    width: 410px;
+    margin: 15px auto;
+  }
+
+  .project:hover .project-expl { display: none; }
+  .project-bottom { margin-top: 95vh; }
+}
+
 @media screen and (max-width: 500px) {
+  nav ul a { font-size: 20px; }
+
+  #projects { height: 180vh; }
+  
+  .horizontal-line-projects {
+    top: -95px;
+    margin-left: 45px;
+  }
+
+  .slide { top: 235vh; }
+
+  .arrow {top: 45%}
+  #arrow-left  { margin-left : 20px; }
+  #arrow-right { margin-right: 20px; }
+
+  .project {
+    height: 250px;
+    width: 240px;
+    margin: 10px auto;
+  }
+  
+  .slide-lower { font-size: 18px; }
+
+  .project-bottom {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 35vh;
+  }
+
+  #experiences {
+    height: 145vh;
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+  
+  .organization h1, .work h1 {
+    font-size: 32.5px;
+    padding-left: 30px;
+  }
+
+  .horizontal-line {
+    height: 4px;
+    width: 240px;
+  }
+
+  .organization-exp ul li, .work-exp ul li {
+    font-size: 20px;
+  }
+
+  .organization-exp ul li:hover > p,
+  .work ul li:hover  > p {
+    display: none;
+  }
+
+  .ep_contact { width: 150px; }
+  .contact-upper { margin: 0 5px; }
+  .contact-upper h3 { font-size: 22.5px; }
+  .contact-upper p { font-size: 19px; }
+
   .email-phone {
     justify-content: space-around;
     width: 100%;

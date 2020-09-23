@@ -89,11 +89,11 @@ header form input[type='submit'] {
   font-weight: bold;
   border: 0;
   cursor: pointer;
+  color: white;
 }
 
 header form input[type='submit']:hover {
   background-color: darkblue;
-  color: white;
 }
 
 .features {

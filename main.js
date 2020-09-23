@@ -1,5 +1,6 @@
 // For the loading screen
 const main = document.getElementById('main');
+
 function showMain() {
   setTimeout(() => {
     main.style.display = 'block';
@@ -9,6 +10,7 @@ function showMain() {
 
 // Removing the loading screen from html
 const loading = document.getElementById('loading');
+
 function removeLoadingDiv() {
   setTimeout(() => {
     loading.parentNode.removeChild(loading);
@@ -125,7 +127,7 @@ copy_number.addEventListener('click', () => copyNumber());
 
 
 // For Navbar in small screen
-const navSlide = () => {
+function navSlide() {
   const burger = document.getElementById('burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
@@ -150,7 +152,7 @@ const navSlide = () => {
 
 
 // Run the all functions
-const app = () => {
+const app() {
   showMain();
   removeLoadingDiv();
   startSlide();
