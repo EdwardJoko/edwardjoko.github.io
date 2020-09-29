@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
-  --dark-blue: #163458;
-  --main-blue: #78CCDE;
+  --background: #100340;
+  --hover: #283264;
+  --title: #CEDAE7;
+  --text: #83D2f0;
 }
 
 * {
@@ -13,46 +15,45 @@
   scroll-behavior: smooth;
 }
 
+
+/* LOADING SCREEN */
 .loading-screen {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--dark-blue);
+  background-color: var(--background);
   color: white;
-  width: 100%;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 25vh;
+  padding-left: 20vw;
   z-index: 99;
   animation: loading-animation 2s ease-out;
   animation-fill-mode: forwards;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @keyframes loading-animation {
-  90% { transform: translateY(0); }
-  99% { transform: translateY(-100%); }
+  90%  { transform: translateY(0);     }
+  99%  { transform: translateY(-100%); }
   100% { transform: translateY(-100%); }
 }
 
 .terminal {
-  font-size: 50px;
-  position: absolute;
-  color: white;
-  top: 265px;
-  left: 200px;
+  font-size: 45px;
+}
+.loading  {
+  margin-top: 10px;
 }
 
-.terminal-line {
-  width: 100px;
-  height: 8px;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  top: 41px;
-  left: 40px;
-}
-
-.loading {
-  margin-top: 350px;
-  margin-left: 200px;
+.loading-text {
+  font-size: 45px;
+  margin-left: 40px;
 }
 
 .line {
@@ -61,6 +62,7 @@
   color: white;
   position: absolute;
   animation: rotate 1s linear infinite;
+  margin-top: 15px;
 }
 
 @keyframes rotate {
@@ -88,43 +90,30 @@
 }
 
 .line:nth-child(1) { animation-delay: 0.05s; }
-.line:nth-child(2) { animation-delay: 0.1s; }
+.line:nth-child(2) { animation-delay: 0.1s;  }
 .line:nth-child(3) { animation-delay: 0.15s; }
-.line:nth-child(4) { animation-delay: 0.2s; }
+.line:nth-child(4) { animation-delay: 0.2s;  }
 .line:nth-child(5) { animation-delay: 0.25s; }
-.line:nth-child(6) { animation-delay: 0.3s; }
+.line:nth-child(6) { animation-delay: 0.3s;  }
 
-.loading-text {
-  margin-left: 30px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-}
-
-main {
-  position: absolute;
-  width: 100%;
+/* MAIN CONTENT */
+#main {
   display: none;
+  background-color: var(--background);
   overflow-x: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
+
+/* NAV BAR */
 nav {
   position: fixed;
   width: 100%;
   height: 10vh;
-  background-color: var(--dark-blue);
   z-index: 89;
-}
-
-#burger {
-  display: none;
-}
-
-#burger > div {
-  width: 32.5px;
-  height: 3px;
-  background-color: white;
-  margin: 7.5px;
+  background-color: var(--background);
 }
 
 nav ul {
@@ -139,7 +128,7 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  padding: 20px 25px;
+  padding: 18px 25px;
   font-size: 22.5px;
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -147,187 +136,312 @@ nav ul a {
 }
 
 nav ul a:hover {
-  background-color: var(--main-blue);
-  font-weight: bold;
+  background-color: var(--hover);
+  font-weight: 600;
 }
 
+
+/* ABOUT */
 #about {
-  background-color: var(--main-blue);
   height: 100vh;
-  color: white;
+  width: 100%;
 }
 
-.about-main {
-  padding-top: 20vh;
-  padding-left: 10vw;
-  height: 90%;
+.title {
+  color: white;
+  padding-top: 10vh;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  width: 85%;
+  margin: 0 auto;
+  color: var(--title); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#about .title {
+  padding-top: 15vh;
+}
+
+.title h1 {
+  margin-right: 20px;
+}
+
+.title .horizontal-line {
+  width: 90%;
+  height: 1px;
+  background-color: var(--title); 
+  margin-top: 10px;
+}
+
+#about article {
+  width: 85%;
+  margin: 2.5vw auto 0 auto;
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.bio {
+  color: var(--text);
+  max-width: 55vw;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 30px;
 }
 
-.about-main .name {
-  width: 600px;
-  padding-top: 25px;
-  font-size: 50px;
-  text-decoration: none;
+.bio h2 {
+  font-size: 30px;
+}
+
+.bio h1 {
+  font-size: 40px;
   color: white;
+  margin: 10px 0;
   cursor: default;
-  font-weight: bold;
 }
 
-.my-picture {
-  position: absolute;
-  text-align: center;
-  left: 68vw;
-  top: 20vh;
-  color: white;
+.bio p {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.my-picture img {
+.bio p a {
+  text-decoration: none;
+  color: var(--title);
+}
+
+.bio-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  margin-bottom: 0;
+}
+
+.bio-picture img {
   width: 250px;
   height: auto;
+  margin-bottom: 15px;
 }
 
-.my-picture p {
-  font-size: 16px;
-}
-
-.hello {
+.bio-picture p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
   color: white;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 125px;
-  position: absolute;
-  left: 62.5vw;
-  top: 72vh;
 }
 
-.physics-formula {
-  font-size: 40px;
-  font-weight: bold;
-  transform: rotate(270deg);
-  position: absolute;
-  top: 475px;
-  left: -40px;
-}
-
-.physics-formula span {
-  font-size: 15px;
-  position: relative;
-  top: -25px;
-}
-
-.about-hide {
-  display: none;
-}
-
-.identity h1:hover > .about-hide {
-  display: block;
+.about-article .bio-container:hover > .bio-picture {
+  display: flex;
 }
 
 .about-icons {
-  font-size: 45px;
-  color: white;
-  margin-top: 150px;
-}
-
-.about-main h4 {
-  font-size: 19.5px;
-  color: var(--dark-blue);
-  padding: 5px 0;
-}
-
-.about-bottom {
-  height: 10%;
-  background-color: white;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
-}
-
-#skills {
-  background-color: lightblue;
-  width: 100%;
-  height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--dark-blue);
-}
-
-.skills-title {
-  height: 20%;
-  padding-top: 15vh;
-  padding-left: 7.5vw;
-}
-
-.skills-title h1 {
+  position: absolute;
   font-size: 35px;
+  color: var(--title);
+  margin-top: 7.5vh;
+}
+
+
+/* SKILLS */                            
+#skills {                               
+  height: 110vh;                       
+  width: 100%;                         
+}
+
+#skills .title h1 {
+  margin-left: 20px;
+}
+
+.horizontal-line-skills-left {
+  width: 30%;
+  height: 1px;
+  background-color: var(--title);
+  margin-top: 10px;
 }
 
 .skills-section {
+  width: 90%;
+  height: 70vh;
+  margin: 1vh auto 0 auto;
   display: flex;
   flex-direction: row;
-  padding-top: 4vw;
-  padding-left: 10vw;
-  height: 72.5%;
+  justify-content: space-around;
 }
 
-.vertical-line {
-  height: 49.25vh;
-  width: 0.5vw;
-  background-color: var(--dark-blue);
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  height: 100%;
+  width: 31%;
 }
 
 .skill {
-  font-size: 32.5px;
-  padding: 20px 50px 20px 20px;
-}
-
-.skill-html {
+  height: 12.5vh;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  padding-left: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  margin: auto 0;
+  font-size: 35px;
+  font-weight: 600;
+  cursor: default;
 }
 
-.html-effect-left {
+.skill-arrow {
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent var(--text);
+  border-style: solid;
+  margin-right: 10px;
+}
+
+.skill h1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.skill:hover {
+  color: var(--background);
+  background-color: var(--text);
+}
+
+.html-effect-left {                             
+  display: none;                                
+}                                               
+                                                
+.html-effect {                                  
+  opacity: 0;                                   
+}                                               
+                                                
+.skills-container .skill:hover > .html-effect-left {
+  display: block;                               
+}                                               
+                                                
+.skills-container .skill:hover > .html-effect {     
+  opacity: 1;                                   
+}                              
+
+.skills-container .skill:hover > .skill-arrow {
   display: none;
 }
 
-.html-effect {
+.css-skill, .bootstrap-skill, .js-skill {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.css-effect {                         
+  position: relative;
+  font-size: 15px;                    
+  top: -110px;
+  opacity: 0;
+  pointer-events: none;
+}                                     
+                                      
+.skills-container .css-skill:hover > .css-effect {
+  opacity: 1;
+  color: var(--text);            
+}                                     
+
+.bootstrap-effect, .js-effect {
+  font-size: 15px;                            
+  margin-left: 15px;
   opacity: 0;
 }
 
-.section .skill-html:hover > .html-effect-left {
-  display: block;
-}
-
-.section .skill-html:hover > .html-effect {
+.skills-container .bootstrap-skill:hover > .bootstrap-effect,    
+.skills-container .js-skill:hover > .js-effect {          
   opacity: 1;
+  color: var(--background);            
 }
 
-.bootstrap-effect, .react-effect, .js-effect {
-  position: absolute;
+.sass-skill, .react-skill, .redux-skill, .python-skill {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.sass-effect, .react-effect, .redux-effect, .python-effect {
   font-size: 15px;
   margin-left: 15px;
   opacity: 0;
 }
 
-.section .skill:hover > .bootstrap-effect,
-.section .skill:hover > .react-effect,
-.section .skill:hover > .js-effect {
+.skills-container .sass-skill:hover > .sass-effect,
+.skills-container .react-skill:hover > .react-effect,
+.skills-container .redux-skill:hover > .redux-effect,
+.skills-container .python-skill:hover > .python-effect {
   opacity: 1;
+  color: var(--background);
 }
 
-.inprogress {
-  padding: 20px;
+.git-skill {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 100%;
 }
 
-.skill:hover, .inprogress:hover {
-  background-color: var(--dark-blue);
-  color: white;
+.git-effect {
+  font-size: 15px;
+  opacity: 0;
+}
+
+.git {
+  position: absolute;
+  font-size: 40px;
+  margin-left: 275px;
+  margin-top: -50px;
+}
+
+.skills-container .git-skill:hover > .git-effect {
+  opacity: 1;                                           
+  color: var(--background);                             
+}                                                       
+
+.corel-effect {
+  font-size: 40px;
+  margin-left: 50px;
+  opacity: 0;
+}
+
+.skills-container .skill:hover > .corel-effect {
+  opacity: 1;
+  color: var(--background);                             
+}
+
+.sm-skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-skill h3 {
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .skills-inprogress {
-  display: none;
   font-size: 20px;
   padding: 20px 50px 25px 20px;
   font-weight: normal;
+  display: none;
+  position: relative;
 }
 
 .skills-inprogress h2 {
@@ -339,104 +453,26 @@ nav ul a:hover {
   font-size: 17.5px;
 }
 
-.section h3:hover > .skills-inprogress {
+.skills-container .sm-skill:hover > h3 {
+  color: var(--background);
+  margin-top: 190px;
+}
+
+.skills-container .sm-skill:hover > .skills-inprogress {
   display: block;
+  color: var(--background);
+  background-color: var(--text);
 }
 
-.skill2 {
-  font-size: 32.5px;
-  padding: 20px 175px 20px 20px;
+
+/* PROJECTS */
+#projects {       
+  height: 110vh;
+  width: 100%;  
 }
 
-.skill2:hover {
-  background-color: var(--dark-blue);
-  color: white;
-}
-
-.css-effect {
-  position: absolute;
-  font-size: 15px;
-  left: 175px;
-  display: none;
-}
-
-.section .skill2:hover > .css-effect {
-  display: block;
-  color: var(--dark-blue);
-}
-
-.sass-effect, .redux-effect, .python-effect {
-  position: absolute;
-  font-size: 15px;
-  margin-left: 15px;
-  opacity: 0;
-}
-
-.section .skill2:hover > .sass-effect,
-.section .skill2:hover > .redux-effect,
-.section .skill2:hover > .python-effect {
-  opacity: 1;
-}
-
-.skill-git {
-  display: flex;
-  flex-direction: row;
-}
-
-.git-effect {
-  position: absolute;
-  font-size: 15px;
-  margin-left: 15px;
-  opacity: 0;
-  margin-top: 35px;
-}
-
-.git {
-  font-size: 40px;
-  margin-left: 275px;
-  margin-top: -50px;
-}
-
-.section .skill-git:hover > .git-effect {
-  opacity: 1;
-}
-
-.corel-effect {
-  font-size: 40px;
-  margin-left: 225px;
-  margin-top: -40px;
-  opacity: 0;
-}
-
-.section .skill-corel:hover > .corel-effect {
-  opacity: 1;
-}
-
-.skills-bottom {
-  height: 7.5%;
-  background-color: var(--dark-blue);
-}
-
-#projects {
-  background-color: var(--dark-blue);
-  height: 125vh;
-}
-
-.projects-title {
-  height: 20%;
-  padding-top: 10vh;
-  padding-left: 7.5vw;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.horizontal-line-projects {
-  height: 4px;
-  width: 200px;
-  background-color: white;
-  margin: -25px 0 12.5px 75px;
-  position: relative;
-  top: -15px;
+#projects .title h1 {
+  margin: 0 20px;
 }
 
 .projects-section {
@@ -448,7 +484,7 @@ nav ul a:hover {
 
 .arrow {
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 47.5%;
   width: 0;
   height: 0;
@@ -481,13 +517,12 @@ nav ul a:hover {
 .slide {
   height: 15%;
   width: 95%;
-  /* background-color: blue; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 217.5vh;
+  top: 227.5vh;
   margin: 0 auto;
   transition: transform 0.55s ease-in-out;
 }
@@ -499,14 +534,13 @@ nav ul a:hover {
 .project {
   height: 90%;
   width: 33%;
-  background-color: lightblue;
   margin: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   flex-direction: column;
-  border: solid 2.5px var(--main-blue);
+  border: solid 15px var(--text);
 }
 
 .slide-upper {
@@ -515,7 +549,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 15px var(--dark-blue);
+  background-color: rgba(206, 218, 231, 0.975);
 }
 
 .project-image {
@@ -526,7 +560,7 @@ nav ul a:hover {
 }
 
 .project-expl {
-  background-color: rgba(22, 52, 100, 0.65);
+  background-color: rgba(22, 52, 100, 0.7);
   position: absolute;
   height: 70%;
   width: 30%;
@@ -540,21 +574,21 @@ nav ul a:hover {
 .slide-lower {
   height: 15%;
   width: 100%;
-  background-color: var(--dark-blue);
-  font-size: 23.5px;
+  background-color: var(--text);
+  font-size: 22.5px;
+  font-weight: 600;
   padding: 20px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #163458;
   font-family: 'Montserrat', sans-serif;
 }
 
 .code {
   transition: color 0.3s ease-out;
   display: none;
-  color: white;
   font-size: 20px;
 }
 
@@ -574,20 +608,21 @@ nav ul a:hover {
 
 .project-bottom a {
   text-decoration: none;
-  color: var(--dark-blue);
+  color: var(--title);
 }
 
 .better-code {
   padding: 10px 20px;
-  border-radius: 5px;
   font-size: 20px;
-  background-color: white;
-  transition: 0.3s ease-out;
   font-family: 'Montserrat', sans-serif;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--hover);
 }
 
 .better-code:hover {
-  background-color: var(--main-blue);
+  background-color: var(--hover);
+  color: var(--title);
 }
 
 .better-code:hover > i {
@@ -600,33 +635,36 @@ nav ul a:hover {
   transition: transform 0.3s ease-out;
 }
 
-#experiences {
-  background-color: var(--main-blue);
-  height: 120vh;
-  padding-top: 5vh;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--dark-blue);
+/* EXPERIENCES */  
+#experiences {     
+  height: 110vh;
+  width: 100%;  
 }
 
-.organization {
-  margin-left: 5vw;
+#experiences .title h1 {
+  margin: 0 20px;
+}
+
+.horizontal-line-projects-right {
+  width: 30%;
+  height: 1px;
+  background-color: var(--title);
+  margin-top: 10px;
+}
+
+.organization, .work {
+  margin-left: 12.5vw;
 }
 
 .organization h1, .work h1 {
-  font-size: 40px;
+  font-size: 35px;
   padding-left: 60px;
-  margin-top: 5vh;
+  color: var(--title);
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.organization-exp-icons {
-  font-size: 55px;
-  display: flex;
-  position: absolute;
-  right: 250px;
-  margin-top: -60px;
-  justify-content: space-around;
-  align-items: space-around;
-  width: 200px;
+.work h1 {
+  margin-top: 5vh;
 }
 
 .organization-exp ul li, .work-exp ul li {
@@ -634,26 +672,29 @@ nav ul a:hover {
   padding-bottom: 3px;
   cursor: default;
   max-width: 900px;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .organization-exp ul li:hover,
 .work-exp ul li:hover {
-  background-color: var(--dark-blue);
-  color: white;
+  background-color: var(--hover);
   font-weight: bold;
 }
 
 
 .organization-exp ul li:hover > p,
 .work-exp ul li:hover > p {
-  background-color: var(--dark-blue);
+  background-color: var(--hover);
   font-weight: normal;
+  color: white;
 }
 
 .organization-exp ul li p,
 .work ul li p {
   display: none;
   font-size: 21px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .organization-exp ul li:hover > p,
@@ -662,7 +703,6 @@ nav ul a:hover {
 }
 
 .work {
-  margin-left: 25vw;
   margin-top: -25px;
 }
 
@@ -671,54 +711,41 @@ nav ul a:hover {
   flex-direction: row;
 }
 
-.work-exp-icons {
-  font-size: 45px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: -100px;
-  justify-content: space-around;
-  align-items: center;
+/* CONTACT */  
+#contact {     
+  height: 100vh;
+  width: 100%;  
+}               
+
+#contact .title h1 {
+  margin-left: 20px;
 }
 
-.horizontal-line {
-  height: 6px;
-  width: 375px;
-  background-color: var(--dark-blue);
-  margin: 5px 0 12.5px 30px;
-}
-
-#contact {
-  background-color: var(--dark-blue);
-  height: 105vh;
-}
-
-.contact-upper {
-  height: 95vh;
+.contact-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 15vh;
+  margin-top: 5vh;
   font-family: 'Ubuntu', sans-serif;
-  color: white;
+  color: var(--text);
 }
 
-.contact-upper h1 {
+.contact-content h1 {
   font-size: 45px;
   font-weight: 500;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  color: var(--title);
 }
 
-.contact-upper h3 {
-  font-size: 25px;
+.contact-content h5 {
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 30px;
 }
 
-.contact-upper p {
-  font-size: 20px;
-  margin: 0 auto;
+.contact-content p {
+  font-size: 18px;
   width: 550px;
   margin-bottom: 50px;
 }
@@ -734,28 +761,30 @@ nav ul a:hover {
 .ep_contact {
   width: 175px;
   height: 65px;
-  background-color: white;
-  color: var(--dark-blue);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17.5px;
   font-family: 'Montserrat', sans-serif;
-  border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-}
-
-#show-number i {
-  font-size: 40px;
+  color: var(--text);
+  background-color: var(--background);
+  border-color: var(--title);
+  border-width: 1px;
+  border-style: solid;
 }
 
 .ep_contact:hover {
-  background-color: lightblue;
+  background-color: var(--hover);
 }
 
 .ep_contact i {
   font-size: 35px;
+}
+
+#show-number i {
+  font-size: 40px;
 }
 
 .contact-container {
@@ -764,8 +793,6 @@ nav ul a:hover {
 }
 
 .contact-address {
-  background-color: white;
-  color: var(--dark-blue);
   width: 375px;
   height: 45px;
   display: flex;
@@ -774,11 +801,12 @@ nav ul a:hover {
   margin: 10px auto;
   margin-top: 30px;
   font-size: 20px;
+  background-color: var(--hover);
+  color: var(--title);
   display: none;
 }
 
 .address-icon {
-  color: var(--dark-blue);
   position: relative;
   font-size: 22.5px;
   width: 50px;
@@ -788,7 +816,9 @@ nav ul a:hover {
   align-items: center;
   border-right: solid 0.5px;
   border-left: solid 0.5px;
-  border-color: var(--dark-blue);
+  border-color: var(--title);
+  color: var(--title);
+  background-color: var(--hover);
 }
 
 .contact-address.number {
@@ -797,13 +827,12 @@ nav ul a:hover {
 }
 
 #copied {
-  display: none;
   margin: 1% auto;
+  display: none;
 }
 
 button {
   cursor: pointer;
-  border: none;
 }
 
 button:active {
@@ -815,362 +844,6 @@ button:focus {
 }
 
 .address-icon:hover {
-  background-color: var(--main-blue);
-}
-
-.contact-bottom {
-  height: 10vh;
-  background-color: var(--main-blue);
-}
-
-
-@media screen and (max-width: 1100px) {
-  .skills-section {
-    padding-top: 4vw;
-    padding-left: 5vw;
-  }
-
-  .skill {
-    font-size: 27.5px;
-    padding: 20px 70px 20px 20px;
-  }
-
-  .skill2 {
-    font-size: 25px;
-    padding: 20px 150px 20px 20px;
-  }
-
-  .skill-html {
-    font-size: 22.5px;
-  }
-
-  .bootstrap-effect, .react-effect, .js-effect,
-  .css-effect, .sass-effect, .redux-effect,
-  .python-effect, .git-effect {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
-  .css-effect {
-    left: 60px;
-  }
-
-  .email-phone {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  nav ul {
-    margin-left: 50px;
-  }
-
-  .identity h1:hover > .about-hide {
-    display: none;
-  }
-
-  .skills-title h1 {
-    font-size: 30px;
-  }
-
-  .skill {
-    font-size: 25px;
-    padding: 20px 50px 20px 20px;
-  }
-
-  .vertical-line {
-    height: 44vh;
-  }
-
-  .skill2 {
-    font-size: 25px;
-    padding: 20px 75px 20px 20px;
-  }
-
-  /* delete the effect of hover in small screen */
-  .skills-title p { display: none; }
-  .html-effect { display: none; }
-  .section .skill-html:hover > .html-effect-left { display: none; }
-  .section .skill-html:hover > .html-effect { opacity: 0; }
-  .bootstrap-effect, .react-effect, .js-effect { display: none; }
-  .section .skill2:hover > .css-effect { display: none; }
-  .sass-effect, .redux-effect, .python-effect { display: none; }
-  .corel-effect { display: none; }
-  .git-effect { display: none; }
-
-  #experiences { height: 130vh; }
-}
-
-@media screen and (max-width: 900px) {
-  .organization-exp-icons {
-    display: none;
-  }
-
-  .slide-lower {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .terminal {
-    left: 100px;
-  }
-
-  .terminal-line {
-    left: 30px;
-  }
-
-  .loading {
-    margin-left: 100px;
-  }
-
-  .contact-upper p {
-    width: 90%;
-  }
-
-  /* For the navbar in small screen */
-  nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 90vh;
-    top: 10vh;
-    background: var(--dark-blue);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 40%;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-    padding: 30px 0;
-  }
-
-  .nav-links li {
-    opacity: 0;
-  }
-
-  #burger {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    margin: 15px;
-  }
-
-  #experiences {
-    height: 150vh;
-  }
-}
-
-/* For the navbar in small screen */
-.nav-active {
-  transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 100;
-    transform: translateX(0);
-  }
-}
-
-/* the animation of lines of navbar */
-.toggle .line1 { transform: rotate(-45deg) translate(-8px, 6px); }
-.toggle .line2 { opacity: 0; }
-.toggle .line3 { transform: rotate(45deg) translate(-8px, -6px); }
-
-
-@media screen and (max-width: 700px) {
-  .skills-title {
-    padding-top: 12.5vh;
-  }
-
-  .skills-section {
-    flex-direction: column;
-    padding-left: 12.5vw;
-    padding-top: 2.5vh;
-    height: 100%;
-  }
-
-  .vertical-line {
-    display: none;
-  }
-
-  .skill, .skill2 {
-    padding: 10px;
-    font-size: 20px;
-  }
-
-  .inprogress {
-    display: none;
-  }
-
-  .project-expl {
-    font-size: 14px;
-  }
-
-  .work {
-    margin-left: 5vw;
-  }
-
-  .work-exp-icons {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .loading {
-    margin-top: 70vh;
-    margin-left: 10vw;
-  }
-
-  .loading-text {
-    font-size: 27.5px;
-  }
-
-  .terminal {
-    font-size: 30px;
-    top: 60vh;
-    left: 10vw;
-  }
-
-  .terminal-line {
-    display: none;
-  }
-
-  .about-main {
-    padding-top: 15vh;
-    padding-left: 5vw;
-  }
-
-  .about-main .name {
-    width: 100%;
-    font-size: 40px;
-  }
-
-  .about-main h4 { font-size: 15px; }
-  .about-icons { font-size: 35px; }
-  .about-hide { display: block; }
-  .my-picture { display: none; }
-  .physics-formula { display: none; }
-
-  .hello {
-    font-size: 50px;
-    position: absolute;
-    left: 50vw;
-    top: 83vh;
-  }
-
-  #projects {
-    height: 245vh;
-  }
-
-  .horizontal-line-projects {
-    top: -175px;
-  }
-
-  .slide {
-    flex-direction: column;
-    top: 272.5vh;
-  }
-
-  .project {
-    height: 410px;
-    width: 410px;
-    margin: 15px auto;
-  }
-
-  .project:hover .project-expl {
-    display: none;
-  }
-  .project-bottom {
-    margin-top: 95vh;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  nav ul a {
-    font-size: 20px;
-  }
-
-  #projects {
-    height: 180vh;
-  }
-
-  .horizontal-line-projects {
-    top: -95px;
-    margin-left: 45px;
-  }
-
-  .slide {
-    top: 235vh;
-  }
-
-  .arrow { top: 45% }
-  #arrow-left  { margin-left : 20px; }
-  #arrow-right { margin-right: 20px; }
-
-  .project {
-    height: 250px;
-    width: 240px;
-    margin: 10px auto;
-  }
-
-  .slide-lower {
-    font-size: 18px;
-  }
-
-  .project-bottom {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 35vh;
-  }
-
-  #experiences {
-    height: 145vh;
-    padding-left: 20px;
-    padding-right: 15px;
-  }
-
-  .organization h1, .work h1 {
-    font-size: 32.5px;
-    padding-left: 30px;
-  }
-
-  .horizontal-line {
-    height: 4px;
-    width: 240px;
-  }
-
-  .organization-exp ul li, .work-exp ul li {
-    font-size: 20px;
-  }
-
-  .organization-exp ul li:hover > p,
-  .work ul li:hover  > p {
-    display: none;
-  }
-
-  .ep_contact { width: 150px; }
-  .contact-upper { margin: 0 5px; }
-  .contact-upper h3 { font-size: 22.5px; }
-  .contact-upper p { font-size: 19px; }
-
-  .email-phone {
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .contact-address {
-    font-size: 19px;
-    width: 345px;
-  }
+  background-color: var(--text);
+  color: var(--background);
 }

@@ -10,38 +10,34 @@
       gtag('config', 'UA-178006499-1');
     </script>
 
-    <meta charset="utf-8">
     <title>Edward's Page</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"  crossorigin="anonymous" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"  crossorigin="anonymous"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc">
   </head>
 
   <body>
-    <!-- LOADING SCREEN -->
     <div class="loading-screen" id="loading">
-      <div class="loading-container">
-        <div class="terminal">
-          <i class="fas fa-terminal"></i>
-          <div class="terminal-line"></div>
+      <div class="terminal">
+        <i class="fas fa-terminal"></i>
+        <div class="terminal-line"></div>
+      </div>
+      <div class="loading">
+        <div class="loading-animation">
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
+          <div class="line"><div class="circle"></div></div>
         </div>
-        <div class="loading">
-          <div class="loading-animation">
-            <div class="line"><div class="circle"></div></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="line"><div class="circle"></div></div>
-          </div>
-          <h1 class="loading-text">welcome.toMyPage();</h1>
-        </div>
+        <h1 class="loading-text">welcome.toMyPage();</h1>
       </div>
     </div>
-    <!-- MAIN CONTENT -->
-    <div id="main">
-      <!-- NAV BAR -->
+    <main id="main">
       <nav id="navbar">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -50,161 +46,132 @@
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-      <!-- ABOUT -->
-      <section id="about" class="about">
-        <div class="title">
-          <h1>About</h1>
-          <div class="horizontal-line"></div>
+        <div id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-        <article class="about-article">
-          <div class="bio-container">
-            <div class="bio">
-              <h2>Hi.</h2>
-              <h1>I'm Edward Junior P T</h1>
-              <p>A final year Physics student at Universitas Gadjah Mada that have big passion in programming. In my free time I like to solve <a href="https://projecteuler.net/archives" target="blank">numerical problems</a> and build website. It brings me so much happiness when a computer does what I want it to do.</p>
-              <p>And so, this is my web portfolio.</p>
-              <div class="about-icons">
-                <i class="fas fa-laptop-code"></i>
-                <i class="fas fa-terminal"></i>
-                <i class="fas fa-radiation"></i>
+      </nav>
+      <div id="about">
+        <div class="about-main">
+          <div class="identity">
+            <h1>
+              <div class="name">I'm Edward Junior P T</div>
+              <div class="about-hide">
+                <div class="my-picture">
+                  <img src="me.png" class="me" alt="My Picture">
+                  <p>Use my mask for safety :)</p>
+                </div>
+                <h2 class="hello">HELLO</h2>
+                <div class="physics-formula">
+                  E = mc<span>2</span>
+                </div>
               </div>
-            </div>
-            <div class="bio-picture">
-              <img src="images/me.png" class="me" alt="My Picture">
-              <p>You fine me!</p>
-              <p>I use my mask for safety btw :)</p>
-            </div>
+            </h1>
           </div>
-        </article> 
-      </section>
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="title">                  
-          <div class="horizontal-line-skills-left"></div>
-          <h1>Skills</h1>                     
-          <div class="horizontal-line"></div>
-        </div>                               
+          <h4>A final year Physics student at Universitas Gadjah Mada</h4>
+          <h4>I'm a Web Developer and this is my portfolio</h4>
+          <div class="about-icons">
+            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-radiation"></i>
+          </div>
+        </div>
+        <div class="about-bottom"></div>
+      </div>
+      <div id="skills">
+        <div class="skills-title">
+          <h1>SKILLS</h1>
+          <p>you can hover to each point ;)</p>
+        </div>
         <div class="skills-section">
-          <div class="skills-container">
-            <div class="skill">
-              <div class="skill-arrow"></div>
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill skill-html">
               <div class="html-effect-left">&lt;</div>
-              <h1>HTML</h1>
-              <div class="html-effect">&gt;&lt;</div>
-              <div class="html-effect">/HTML&gt;</div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="css-skill">
-                <h1>CSS</h1>
-                <div class="css-effect">
-                  She's good at making me handsome.
-                </div>
+              HTML
+              <div class="html-effect">&gt;&lt;</div><div class="html-effect">/HTML></div>
+            </h2>
+            <h2 class="skill skill-bootstrap">
+              Bootstrap
+              <div class="bootstrap-effect">
+                Thanks Twitter for making life easier.
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="bootstrap-skill">
-                <h1>Bootstrap</h1>
-                <div class="bootstrap-effect">
-                  Thanks Twitter for making life easier.
-                </div>
+            </h2>
+            <h2 class="skill skill-react">
+              ReactJS
+              <div class="react-effect">
+                < I am JSX! not HTML />
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="js-skill">
-                <h1>JavaScript</h1>
-                <div class="js-effect">
-                  console.log("Hello <strike>world</strike> Employer.");
-                </div>
+            </h2>
+            <h2 class="skill skill-js">
+              Javascript
+              <div class="js-effect">
+                console.log("Hello <strike>world</strike> Employer.")
               </div>
-            </div>
+            </h2>
           </div>
-          <div class="skills-container">
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="sass-skill">
-                <h1>Sass</h1>
-                <div class="sass-effect">
-                  CSS but I { can do { this and } else }
-                </div>
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill2 skill-css">
+              CSS
+              <div class="css-effect">
+                She's good at making me handsome.
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="react-skill">
-                <h1>ReactJS</h1>
-                <div class="react-effect">
-                  < I am JSX! not HTML />
-                </div>
+            </h2>
+            <h2 class="skill2 skill-sass">
+              Sass
+              <div class="sass-effect">
+                CSS but I { can do { this and } else }
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="redux-skill">
-                <h1>Redux</h1>
-                <div class="redux-effect">
-                  I'm the manager of frameworks.
-                </div>
+            </h2>
+            <h2 class="skill2 skill-redux">
+              Redux
+              <div class="redux-effect">
+                I'm the manager of frameworks.
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="python-skill">
-                <h1>Python</h1>
-                <div class="python-effect">
-                  I use Python for scripting task.
-                </div>
+            </h2>
+            <h2 class="skill2">
+              Python
+              <div class="python-effect">
+                I use Python for scripting task.
               </div>
-            </div>
+            </h2>
           </div>
-          <div class="skills-container">
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="git-skill">
-                <h1>Git</h1>
-                <div class="git-effect">
-                  git commit -m "Portfolio final fix!"
-                  <div class="git">
-                    <i class="fas fa-code-branch"></i>
-                  </div>
+          <div class="vertical-line"></div>
+          <div class="section">
+            <h2 class="skill skill-git">
+              Git
+              <div class="git-effect">
+                git commit -m "Portfolio final fix!"
+                <div class="git">
+                  <i class="fas fa-code-branch"></i>
                 </div>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <h1>Corel Draw</h1>
+            </h2>
+            <h2 class="skill">NodeJS and NPM</h2>
+            <h2 class="skill skill-corel">
+              Corel Draw
               <div class="corel-effect">
                 <i class="fas fa-palette"></i>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <h1>NodeJS and NPM</h1>
-            </div>
-            <div class="skill">
-              <div class="skill-arrow"></div>
-              <div class="sm-skill">
-                <h3 class="inprogress">Special mention</h3>
-                <div class="skills-inprogress">
-                  <h2>ExpressJS</h2>
-                  <h2>MongoDB</h2>
-                  <p>*Only 1 hands on project yet.</p>
-                  <p>#FutureFullstackDev B-)</p>
-                </div>
+            </h2>
+            <h3 class="inprogress">
+              Special mention
+              <div class="skills-inprogress">
+                <h2>ExpressJS</h2>
+                <h2>MongoDB</h2>
+                <p>*Only 1 hands on project yet.</p>
+                <p>#FutureFullstackDev B-)</p>
               </div>
+            </h3>
           </div>
         </div>
-      </section>
-      <!-- PROJECTS -->
-      <section id="projects">
-        <div class="title">
-          <div class="horizontal-line"></div>
-          <h1>Projects</h1>
-          <div class="horizontal-line"></div>
-        </div>
+        <div class="skills-bottom"></div>
+      </div>
+      <div id="projects">
+        <h1 class="projects-title">Projects</h1>
+        <div class="horizontal-line-projects"></div>
         <div class="projects-section">
           <div id="arrow-left" class="arrow"></div>
           <div class="slider">
@@ -216,7 +183,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project01.png" alt="project"
+                    src="./project_images/pr1.png" alt="project"
                   />
                   <span class="project-expl">
                     I use HTML and CSS to create a biography page of Max Planck that is also responsive in mobile. I use the HTML semantic of &lt;ul&gt; and &lt;li&gt; to explain the lifetime of his life.
@@ -235,7 +202,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project02.png" alt="project"
+                    src="./project_images/pr2.png" alt="project"
                   />
                   <span class="project-expl">
                     I create a frontend page of a shop that sells Trombones. I use some icons of fontawesome to demonstrate the features of the items and I also embeded a video of youtube with HTML to show how the Trombones work.
@@ -254,7 +221,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project03.png" alt="project"
+                    src="./project_images/pr3.png" alt="project"
                   />
                   <span class="project-expl">
                     I use the HTML semantic of &lt;form&gt; and &lt;input&gt; to create a frontend page of a survey form. I use all kinds of &lt;input&gt; types so the survey can takes the appropriate input of each question.
@@ -275,7 +242,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project04.png" alt="project"
+                    src="./project_images/pr4.png" alt="project"
                   />
                   <span class="project-expl">
                     I use ReactJS and Bootswatch to create a password generator that can generates 3 types of password (alphabet, alphanumeric, and alphanumeric + sign) that the user can directly copy.
@@ -294,7 +261,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project05.png" alt="project"
+                    src="./project_images/pr5.png" alt="project"
                   />
                   <span class="project-expl">
                     With HTML and CSS I create a page of introductory documentation to learn JavaScript. With a navigation bar that the position is fixed the reader can reach every section with just one click.
@@ -302,7 +269,7 @@
                 </div>
                 <div class="slide-lower">
                   <span class="code">&lt;</span>
-                  Drum Machine
+                  Javascript Documentation
                   <span class="code">&#47;&gt;</span>
                 </div>
               </a>
@@ -313,7 +280,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project06.png" alt="project"
+                    src="./project_images/pr6.png" alt="project"
                   />
                   <span class="project-expl">
                     With ReactJS and Marked library I create a markdown previewer that converts some formats like HTML text into output.
@@ -334,7 +301,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project07.png" alt="project"
+                    src="./project_images/pr7.png" alt="project"
                   />
                   <span class="project-expl">
                     I use ReactJS and a Javascript library to create Podomoro clock. The user can set how long of each session of work and break can be. And with the Javascript library I make sure so the timer of the clock will still be accurate.
@@ -353,7 +320,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project08.png" alt="project"
+                    src="./project_images/pr8.png" alt="project"
                   />
                 </div>
                 <div class="slide-lower">
@@ -369,7 +336,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project09.png" alt="project"
+                    src="./project_images/pr9.png" alt="project"
                   />
                 </div>
                 <div class="slide-lower">
@@ -387,12 +354,12 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project10.png" alt="project"
+                    src="./project_images/pr10.png" alt="project"
                   />
                 </div>
                 <div class="slide-lower">
                   <span class="code">&lt;</span>
-                  Javascript Documentation
+                  Drum Machine
                   <span class="code">&#47;&gt;</span>
                 </div>
               </a>
@@ -403,7 +370,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project11.png" alt="project"
+                    src="./project_images/pr11.png" alt="project"
                   />
                 </div>
                 <div class="slide-lower">
@@ -419,7 +386,7 @@
                 <div class="slide-upper">
                   <img
                     class="project-image"
-                    src="./images/project12.png" alt="project"
+                    src="./project_images/pr12.png" alt="project"
                   />
                 </div>
                 <div class="slide-lower">
@@ -441,18 +408,16 @@
             Link to the code of the projects<i class="fas fa-chevron-right"></i>
           </a>
         </div>
-
-      </section>
-      <!-- EXPERIENCES -->
-      <section id="experiences">
-        <div class="title">
-          <div class="horizontal-line"></div>
-          <h1>Experiences</h1>
-          <div class="horizontal-line-projects-right"></div>
-        </div>
+      </div>
+      <div id="experiences">
         <div class="organization">
           <h1>Organization</h1>
+          <div class="horizontal-line"></div>
           <div class="organization-exp">
+            <div class="organization-exp-icons">
+              <i class="fas fa-users"></i>
+              <i class="fas fa-people-carry"></i>
+            </div>
             <ul>
               <li>
                 Head of Organization - PMK MIPA 2019
@@ -482,7 +447,12 @@
         </div>
         <div class="work">
           <h1>Work</h1>
+          <div class="horizontal-line"></div>
           <div class="work-exp">
+            <div class="work-exp-icons">
+              <i class="fas fa-charging-station"></i>
+              <i class="fas fa-vial"></i>
+            </div>
             <ul>
               <li>
                 Student Laboratory Assistant of Physics Laboratory - FMIPA UGM
@@ -497,17 +467,12 @@
             </ul>
           </div>
         </div>
-      </section>
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="title">
-          <div class="horizontal-line"></div>
-          <h1>Contact</h1>
-        </div>
-        <div class="contact-content">
+      </div>
+      <div id="contact">
+        <div class="contact-upper">
           <h1>I can help.</h1>
-          <h5>I'm currently available for work.</h3>
-          <p>If you're looking for a web developer and you think I'm good enough for the position. I'll be very happy to help you!</p>
+          <h3>I'm currently available for work.</h3>
+          <p>If you're currently looking for a Web developer and you think I'm good enough for the position. I'll be very happy to help you!</p>
           <div class="email-phone">
             <div class="email-contact">
               <button id="show-email" class="ep_contact">
@@ -518,22 +483,22 @@
               <button id="show-number" class="ep_contact">
                 <i class="fab fa-whatsapp"></i> call me
               </button>
-            </div> 
+            </div>
           </div>
           <div class="contact-container">
             <div class="contact-address email">
-              <a href="mailto:edwardjptatuhas@gmail.com" class="address-icon">
+              <a href="mailto:edwardtatuhas@gmail.com"
+                class="address-icon">
                 <i class="fas fa-at"></i>
               </a>
-              <div class="email_string">
-                edwardjptatuhas@gmail.com
-              </div>
+              <div class="email_string">edwardtatuhas@gmail.com</div>
               <button id="copy-email" class="address-icon">
                 <i class="fas fa-clone"></i>
               </button>
             </div>
             <div class="contact-address number">
-              <a href="tel:+6282299454118" class="address-icon">
+              <a href="tel:+6282299454118"
+                class="address-icon">
                 <i class="fas fa-phone-volume"></i>
               </a>
               <div class="number_string">+6282299454118</div>
@@ -544,8 +509,10 @@
             <p id="copied">Copied to clipboard!</p>
           </div>
         </div>
-      </section>
-    </div>
-    <script src="app.js"></script>
+        <div class="contact-bottom"></div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
