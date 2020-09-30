@@ -1,4 +1,4 @@
-// For the loading screen
+// Showing the main content after the loading screen
 const main = document.getElementById('main');
 
 function showMain() {
