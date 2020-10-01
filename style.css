@@ -754,7 +754,8 @@ nav ul a:hover {
 .contact-content p {
   font-size: 18px;
   width: 550px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 65px;
 }
 
 .email-phone {
