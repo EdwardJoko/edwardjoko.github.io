@@ -1107,5 +1107,17 @@ button:focus {
 
   .ep_contact i  { font-size: 25px; }
   #show-number i { font-size: 30px; }
+
+  .contact-address {
+    width: 325px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .address-icon {
+    font-size: 17.5px;
+    width: 40px;
+    height: 35px;
+  }
 }
 
