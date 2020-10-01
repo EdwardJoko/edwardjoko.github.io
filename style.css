@@ -39,9 +39,7 @@
 }
 
 @keyframes loading-animation {
-  80%  { transform: translateY(0);     }
-  85%  { transform: translateY(-25%);  }
-  90%  { transform: translateY(-50%);  }
+  90%  { transform: translateY(0);     }
   95%  { transform: translateY(-75%);  }
   100% { transform: translateY(-100%); }
 }
@@ -113,9 +111,12 @@ nav {
   height: 10vh;
   z-index: 89;
   background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-nav ul {
+.nav-links {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -852,3 +853,259 @@ button:focus {
   background-color: var(--text);
   color: var(--background);
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  /* Removing the hover effect in skills section */
+  .skills-container .skill:hover > .html-effect-left {
+    display: none;
+  }
+  .skills-container .skill:hover > .html-effect,
+  .skills-container .css-skill:hover > .css-effect,
+  .skills-container .bootstrap-skill:hover > .bootstrap-effect,
+  .skills-container .js-skill:hover > .js-effect,
+  .skills-container .sass-skill:hover > .sass-effect,
+  .skills-container .react-skill:hover > .react-effect,
+  .skills-container .redux-skill:hover > .redux-effect,
+  .skills-container .python-skill:hover > .python-effect,
+  .skills-container .git-skill:hover > .git-effect,
+  .skills-container .skill:hover > .corel-effect {
+    opacity: 0;
+  }
+  .sm-skill, .skill-arrow-special,
+  .skills-container .sm-skill:hover > .skills-inprogress {
+    display: none;
+  }
+  .skill-special:hover {
+    color: var(--text);
+    background-color: var(--background);
+  }
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 850px) {
+  .loading-screen {
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .about-article .bio-container:hover > .bio-picture {
+    display: none;
+  }
+
+  .bio {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .skill h1 {
+    font-size: 30px;
+  }
+
+  .slide-lower {
+    font-size: 17.5px;
+  }
+}
+
+/* For NavBar in small screen */
+.burger { display: none; }
+
+.burger > div {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 700px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    padding: 18px 17.5px;
+    font-size: 17.5px;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+  }
+
+  .title h1 { font-size: 35px; }
+  .bio h1 { font-size: 30px; }
+  .bio h2 { font-size: 20px; }
+
+  .skills-section {
+    flex-direction: column;
+    margin-top: 20vh;
+  }
+
+  .skills-container {
+    width: 100%;
+  }
+
+  .skill {
+    height: 7.5vh;
+    margin: 5px 0;
+  }
+  
+  .skill h1 {
+    font-size: 25px;
+  }
+
+  .css-skill, .bootstrap-skill, .js-skill, .sass-skill,
+  .react-skill, .redux-skill, .python-skill, .git-skill {
+    top: 9px;
+  }
+}
+
+/* For NavBar */
+.nav-active {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 600px) {
+  .terminal, .loading-text {
+    font-size: 30px;
+  }
+  
+  .loading {  margin-top: 10px; }  
+  .line { margin-top: 0; }
+  .loading-text { margin-left: 15px; }
+
+  .circle {
+    top: 20px;
+    height: 4px;
+    width: 4px;
+  }
+
+  .skill h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .terminal, .loading-text {
+    font-size: 22.5px;
+  }
+
+  #about .title {
+    padding-top: 10vh;
+  }
+
+  .css-skill, .bootstrap-skill, .js-skill, .sass-skill,
+  .react-skill, .redux-skill, .python-skill, .git-skill {
+    top: 11px;
+  }
+
+  #projects {
+    height: 145vh
+  }
+  
+  .slide {
+    flex-direction: column;
+    top: 245vh;
+  }
+
+  .project {
+    width: 65%;
+    margin: 10px;
+  }
+
+  .project-expl {
+    height: 40%;
+    width: 60%;
+    font-size: 13px
+  }
+  
+  .slide-lower {
+    font-size: 15px;
+  }
+
+  .project-image-special-1 { padding: 25px 0;   }
+  .project-image-special-2 { padding: 12.5px 0; }
+  .project-image-special-3 { padding: 60px 0;   }
+
+  .project-bottom a {
+    margin-top: 80vh;
+  }
+
+  .better-code {
+    padding: 10px;
+    font-size: 15px
+  }
+
+  .arrow { top: 70%; }
+  #arrow-right { right: 10px; }
+  #arrow-left { left: 10px; }
+
+  .organization, .work { margin: 1vh 9.5vw }
+
+  .organization h1, .work h1 { font-size: 25px; }
+  .organization-exp ul li, .work-exp ul li {
+    font-size: 15px;
+  }
+  .organization-exp ul li p, .work ul li p {
+    font-size: 12px;
+  }
+
+  .contact-content { margin-top: 5vh; }
+  .contact-content h1 { font-size: 30px; }
+  .contact-content h5 { font-size: 17px; }
+  .contact-content p {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .email-phone {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .ep_contact {
+    width: 125px;
+    height: 65px;
+    font-size: 15px;
+  }
+
+  .ep_contact i  { font-size: 25px; }
+  #show-number i { font-size: 30px; }
+}
+

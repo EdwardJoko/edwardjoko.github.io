@@ -184,3 +184,18 @@ button.ghost {
 .container.move-back .overlay-right {
   transform: translateX(0);
 }
+
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 95vw;
+    max-width: 100%;
+    margin: 0 2.5vw;
+  }
+
+  .form-container form,
+  .overlay-panel {
+    padding: 0 10px;
+  }
+}
+

@@ -124,13 +124,32 @@ function copyNumber() {
 
 copy_number.addEventListener('click', () => copyNumber());
 
+
+// For the NavBar in small screen
+function navSlide() {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    // burger animation
+    burger.classList.toggle('toggle');
+    // toggle nav
+    nav.classList.toggle('nav-active');
+  });
+}
+
+
+
+
 // Run the all functions
 const app = () => {
   // Loading screen process
   showMain();
   removeLoadingDiv();
-  // enabling slider in project section
+  // Enabling slider in project section
   startSlide();
+  // Navbar in small screen
+  navSlide();
 }
 
 app();
