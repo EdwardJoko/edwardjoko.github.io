@@ -244,7 +244,7 @@ nav ul a:hover {
   position: absolute;
   font-size: 35px;
   color: var(--title);
-  margin-top: 7.5vh;
+  margin-top: 10vh;
 }
 
 
@@ -659,7 +659,8 @@ nav ul a:hover {
 
 .organization h1, .work h1 {
   font-size: 35px;
-  padding-left: 60px;
+  padding-left: 50px;
+  margin: 10px 0;
   color: var(--title);
   font-family: 'Ubuntu', sans-serif;
 }
