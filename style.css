@@ -676,6 +676,11 @@ nav ul a:hover {
   max-width: 900px;
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
+  cursor: default;
+}
+
+.organization-exp ul li p, .work-exp ul li p {
+  cursor: default;
 }
 
 .organization-exp ul li:hover,
@@ -978,7 +983,7 @@ button:focus {
   .skill {
     height: 7.5vh;
     margin: 5px 0;
-    padding-left: 0;
+    padding: 0 20px;
   }
   
   .skill h1 { font-size: 25px; }
