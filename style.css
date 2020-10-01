@@ -1030,6 +1030,9 @@ button:focus {
     padding-top: 10vh;
   }
 
+  .bio h1 { font-size: 25px; }
+  .bio p  { font-size: 17px; }
+
   .css-skill, .bootstrap-skill, .js-skill, .sass-skill,
   .react-skill, .redux-skill, .python-skill, .git-skill {
     top: 11px;
