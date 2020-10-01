@@ -18,7 +18,7 @@
 
 /* LOADING SCREEN */
 .loading-screen {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: white;
   width: 100%;
   height: 100vh;
@@ -863,16 +863,10 @@ button:focus {
   .skills-container .skill:hover > .html-effect-left {
     display: none;
   }
-  .skills-container .skill:hover > .html-effect,
-  .skills-container .css-skill:hover > .css-effect,
-  .skills-container .bootstrap-skill:hover > .bootstrap-effect,
-  .skills-container .js-skill:hover > .js-effect,
-  .skills-container .sass-skill:hover > .sass-effect,
-  .skills-container .react-skill:hover > .react-effect,
-  .skills-container .redux-skill:hover > .redux-effect,
-  .skills-container .python-skill:hover > .python-effect,
-  .skills-container .git-skill:hover > .git-effect,
-  .skills-container .skill:hover > .corel-effect {
+  .html-effect, .css-effect, .bootstrap-effect, .js-effect,
+  .sass-effect, .react-effect, .redux-effect,
+  .python-effect, .git-effect, .corel-effect {
+    display: none;
     opacity: 0;
   }
   .sm-skill, .skill-arrow-special,
@@ -883,12 +877,6 @@ button:focus {
     color: var(--text);
     background-color: var(--background);
   }
-
-
-
-
-
-
 }
 
 @media screen and (max-width: 850px) {
@@ -978,28 +966,35 @@ button:focus {
 
   .skills-section {
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 2.5vh;
+    height: 100vh
   }
 
   .skills-container {
     width: 100%;
+    align-items: center;
   }
 
   .skill {
     height: 7.5vh;
     margin: 5px 0;
+    padding-left: 0;
   }
   
-  .skill h1 {
-    font-size: 25px;
-  }
+  .skill h1 { font-size: 25px; }
+  .skill-arrow { display: none; }
 
   .css-skill, .bootstrap-skill, .js-skill, .sass-skill,
   .react-skill, .redux-skill, .python-skill, .git-skill {
-    top: 9px;
+    top: 0px;
   }
 
-  .project:hover .code, .project:hover > .project-expl {
+  .horizontal-line-skills-left,
+  .horizontal-line-projects-right {
+    width: 100%;
+  }
+
+  .project:hover .project-expl {
     display: none;
   }
 }
