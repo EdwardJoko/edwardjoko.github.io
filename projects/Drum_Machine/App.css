@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background: #100340;
+  --pad: #283264;
+  --app-background: #CEDAE7;
+  --slider: #83D2f0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+  width: 620px;
+  min-height: 380px;
+  background-color: var(--app-background);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  top: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padbank {
+  width: 390px;
+  height: 350px;
+  background-color: var(--app-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controller {
+  width: 200px;
+  height: 350px;
+  background-color: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px 0;
+}
+
+.powerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.powerButton span {
+  margin-top: -60px;
+  color: var(--app-background)
+}
+
+.button {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.slider {
+  width: 60px;
+  height: 30px;
+  border: 1px solid white;
+  position: absolute;
+  z-index: 1;
+}
+
+.sliderOn {
+  width: 30px;
+  height: 30px;
+  background-color: var(--slider);
+}
+
+.sliderOff {
+  width: 30px;
+  height: 30px;
+  background-color: var(--slider);
+  position: relative;
+  left: 30px;
+}
+
+.displayScreen {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  width: 80%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background);
+  background-color: var(--app-background);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.musicBankOption {
+  display: flex;
+  justify-content: center;
+}
+
+.musicBankOption span {
+  margin-top: -25px;
+  color: var(--app-background)
+}
+
+.bankOne {
+  width: 30px;
+  height: 30px;
+  background-color: var(--slider);
+}
+
+.bankTwo {
+  width: 30px;
+  height: 30px;
+  background-color: var(--slider);
+  position: relative;
+  left: 30px;
+}
+
+.drum-pad {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: var(--pad);
+  margin: 10px 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+  display: flex;
+  border: 0.5px solid white;
+  align-items: center;    
+  justify-content: center;
+  font-size: 45px;
+  color: var(--app-background);
+  user-select: none;
+}         
+
+.drum-pad:active {
+  transform: scale(0.9);
+  box-shadow: none;
+  background-color: var(--background);
+  color: white;
+}
+
+
+@media screen and (max-width: 750px) {
+  .App {
+    width: 100%;
+    flex-direction: column;
+    top: 0;
+  }
+  
+  .controller {
+    width: 100%;
+    height: 225px;
+  }
+
+  .padbank {
+    width: 300px;
+  }
+
+  .drum-pad {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+}

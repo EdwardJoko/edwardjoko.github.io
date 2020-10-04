@@ -677,6 +677,7 @@ nav ul a:hover {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
   cursor: default;
+  user-select: none;
 }
 
 .organization-exp ul li p, .work-exp ul li p {
