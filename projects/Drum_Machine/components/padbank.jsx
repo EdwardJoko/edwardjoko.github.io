@@ -30,7 +30,6 @@ class PadBank extends React.Component {
                     />
                 )
             });
-        // console.log("Joko: ", padBank);
     
         return (
             <div className="padbank">

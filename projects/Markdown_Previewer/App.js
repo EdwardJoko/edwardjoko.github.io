@@ -7,9 +7,10 @@ class App extends React.Component {
     this.state = {
       content: firstContent   // I assigned it in the very bottom
     }
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (event) => {
+  handleChange(event) {
     this.setState({
       content : event.target.value
     });

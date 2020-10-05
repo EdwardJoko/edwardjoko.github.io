@@ -1,3 +1,6 @@
+import React from 'react';
+import './App.css';
+
 new ClipboardJS('.btn'); // https://clipboardjs.com/
                          // we use it here because navigator.clipboard.writeText(password) doesn't work in codepen
 
@@ -34,6 +37,7 @@ class PasswordGenerator extends React.Component {
 
     this.setState({ password });
   }
+
   increaseLength() {
     let passwordLength = this.state.passwordLength;
     if (passwordLength < 20) {
@@ -41,6 +45,7 @@ class PasswordGenerator extends React.Component {
       this.setState({ passwordLength });
     }
   }
+  
   decreaseLength() {
     let passwordLength = this.state.passwordLength;
     if (passwordLength > 4) {
@@ -48,10 +53,12 @@ class PasswordGenerator extends React.Component {
       this.setState({ passwordLength });
     }
   }
+  
   changePasswordType(num) {
     if (num === 1) { this.setState({ type: 'alphabet' }); }
     else if (num === 2) { this.setState({ type: 'alphanumeric' }); }
     else { this.setState({ type: 'alphasymbol' }); }
+  
   }
   /*
   copyToClipboard() {

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-class RandomMachine extends Component {
+class RandomMachine extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,6 +9,8 @@ class RandomMachine extends Component {
       quote: '',
       author: ''
     }
+    this.getArrayOfQuote = this.getArrayOfQuote.bind(this);
+    this.newQuote        = this.newQuote.bind(this);
   }
   
   componentDidMount() {
@@ -19,7 +21,7 @@ class RandomMachine extends Component {
 
   // Get the collection of quotes so we just need to fetch it
   // once and also set the first quote
-  getArrayOfQuote = () => {
+  getArrayOfQuote() {
     fetch('https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json')
       .then(res => res.json())
       .then(data => {
@@ -34,7 +36,7 @@ class RandomMachine extends Component {
       });
   }
   
-  newQuote = () => {
+  newQuote() {
     let index = Math.floor(Math.random() * this.state.arrayOfQuotes.length);
     let quote = this.state.arrayOfQuotes[index];
     this.setState({

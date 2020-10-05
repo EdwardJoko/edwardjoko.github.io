@@ -13,29 +13,26 @@ class App extends React.Component {
       musicBank: bankOne,
       musicBankId: 'Heater Kit'
     }
-    this.powerControl = this.powerControl.bind(this);
+    this.powerControl    = this.powerControl.bind(this);
     this.changeMusicBank = this.changeMusicBank.bind(this);
-    this.changeDisplay = this.changeDisplay.bind(this);
+    this.changeDisplay   = this.changeDisplay.bind(this);
   }
 
-  // Controller methods
   powerControl() {
     let power = !this.state.power;
     let display = this.state.power ? "Power Off" : "Power On";
     
     if (this.state.power) {
-      this.setState({
-        power, display
-      });
-    } else {
-      this.setState({
-        power, display   
-      });
+      this.setState({ power, display });
+    }
+    else {
+      this.setState({ power, display });
       setTimeout(() =>
         this.changeDisplay(this.state.musicBankId), 1000
       );
     }
   }
+
   changeMusicBank() {
     if (this.state.power) {
       (this.state.musicBankId === 'Heater Kit') ?
@@ -51,11 +48,10 @@ class App extends React.Component {
         });
     }
   }
+  
   changeDisplay(display) {
     if (this.state.power) {
-      this.setState({
-        display
-      });
+      this.setState({ display });
     }
   }
 

@@ -6,12 +6,15 @@ class DrumPad extends React.Component {
         this.playSound = this.playSound.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
     }
+
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress);
     }
+    
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeyPress);
     }
+    
     handleKeyPress(e) {
         if (this.props.power) {
             if (e.keyCode === this.props.keyCode) {
@@ -19,6 +22,7 @@ class DrumPad extends React.Component {
             }
         }
     }
+    
     playSound(e) {
         if (this.props.power) {
             this.props.changeDisplay(this.props.clipId);
