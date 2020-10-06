@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+:root {
+  --background: #100340;
+  --hover: #283264;
+  --title: #CEDAE7;
+  --text: #83D2f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Recursive', sans-serif;
+}
+
+body {
+  background-color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.calculator {
+  width: 450px;
+  height: 450px;
+  background-color: var(--background);
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.display {
+  width: 430px;
+  height: 150px;
+  margin: 10px auto 0 auto;
+  background-color: var(--background);
+  
+  .formula {
+    width: 100%;
+    height: 55px;
+    text-align: right;
+    padding-top: 17.5px;
+    padding-right: 10px;
+    font-size: 25px;
+    background-color: var(--text);
+  }
+
+  .result {
+    width: 100%;
+    height: 70px;
+    background-color: #F3EBFF;
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 10px;
+    font-size: 32.5px;
+  }
+}
+
+.buttons {
+  width: 430px;
+  height: 385px;
+  margin: 10px auto 10px auto;
+  background-color: var(--background);
+
+  .uppers {
+    width: 100%;
+    height: 59px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+
+    .notequals {
+      width: 75%;
+      display: flex;
+      flex-direction: row;
+
+      .upper {
+        height: 59px;
+        width: 107.5px;
+        background-color: var(--background);
+        font-size: 26.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: white;
+      }
+
+      .upper:active { transform: scale(0.8); }
+      .upper:hover  { color: var(--text); }
+    }
+    
+    .equals {
+      width: 25%;
+      height: 59px;
+      background-color: var(--background);
+
+      #equals {
+        background-color: var(--background);
+        width: 107.5px;
+        height: 100%;
+        font-size: 30px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: white;
+      }
+
+      #equals:active { transform: scale(0.8); }
+      #equals:hover  { color: var(--text); }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    height: 236px;
+    background-color: var(--background);
+    display: flex;
+
+    .numbers-and-decimal {
+      width: 322.5px;
+      height: 100%;
+      background-color: var(--background);
+      display: flex;
+      flex-wrap: wrap;
+      
+      .number {
+        height: 59px;
+        width: 107.5px;
+        background-color: var(--background);
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: white;
+      }
+
+      .number:active { transform: scale(0.8); }
+      .number:hover  { color: var(--text); }
+    }
+
+    .operators {
+      width: 107.5px;
+      height: 100%;
+      background-color: var(--background);
+
+      .operator {
+        height: 59px;
+        width: 107.5px;
+        background-color: var(--background);
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        color: white;
+      }
+
+      .operator:active { transform: scale(0.8); }
+      .operator:hover  { color: var(--text); }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+    .calculator {
+        width: 380px;
+        height: 450px;
+    }
+    .display {
+        width: 360px;
+    }
+    .buttons {
+        width: 380px;
+    }
+    button {
+        width: 90px !important;
+    }
+}
