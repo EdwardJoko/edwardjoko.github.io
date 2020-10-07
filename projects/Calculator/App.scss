@@ -177,16 +177,18 @@ body {
 
 @media screen and (max-width: 500px) {
     .calculator {
-        width: 380px;
-        height: 450px;
+        width : 380px !important;
+        height: 450px !important;
     }
-    .display {
-        width: 360px;
-    }
-    .buttons {
-        width: 380px;
-    }
-    button {
-        width: 90px !important;
-    }
+    .display { width: 360px !important; }
+    .buttons { width: 380px !important; }
+    button   { width: 90px  !important; }
+}
+
+
+@media screen and (max-width: 400px) {
+    .calculator { width: 340px !important; }
+    .display    { width: 325px !important; }
+    .buttons    { width: 325px !important; }
+    button      { width: 80px  !important; }
 }
