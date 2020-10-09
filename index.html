@@ -13,6 +13,7 @@
     <meta charset="utf-8">
     <title>Edward's Page</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"  crossorigin="anonymous" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc">
@@ -91,7 +92,9 @@
           <h1>Skills</h1>                     
           <div class="horizontal-line"></div>
         </div>                               
-        <div class="skills-section">
+        <div class="skills-section"
+             data-aos="fade-left"
+        >
           <div class="skills-container">
             <div class="skill">
               <div class="skill-arrow"></div>
@@ -496,7 +499,9 @@
         </div>
         <div class="organization">
           <h1>Organization</h1>
-          <div class="organization-exp">
+          <div class="organization-exp"
+               data-aos="fade-right"
+          >
             <ul>
               <li>
                 Head of Organization - PMK MIPA 2019
@@ -533,7 +538,10 @@
         </div>
         <div class="work">
           <h1>Work</h1>
-          <div class="work-exp">
+          <div class="work-exp"
+               data-aos="fade-right"
+               data-aos-offset="120"
+          >
             <ul>
               <li>
                 Student Laboratory Assistant of Physics Laboratory - FMIPA UGM
@@ -553,11 +561,11 @@
       </section>
       <!-- CONTACT -->
       <section id="contact">
-        <div class="title">
+        <div class="title" data-aos="fade-up">
           <div class="horizontal-line"></div>
           <h1>Contact</h1>
         </div>
-        <div class="contact-content">
+        <div class="contact-content" data-aos="fade-up">
           <h1>I can help.</h1>
           <h5>I'm currently available for work.</h3>
           <p>If you're looking for a web developer and you think I'm good enough for the position. I'll be very happy to help you!</p>
@@ -599,6 +607,12 @@
         </div>
       </section>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({
+      offset: 400,
+      duration: 1000
+    });</script>
     <script src="app.js"></script>
   </body>
 </html>

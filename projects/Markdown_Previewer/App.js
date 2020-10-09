@@ -63,6 +63,9 @@ class Preview extends React.Component {
 }
 
 const firstContent = `<h1>Heellooo Visitor</h1>
+<h2>My name is Edward<h2>
+
+### Nice to meet you
 
 # Header 
 ## Sub header
