@@ -58,8 +58,8 @@ class PasswordGenerator extends React.Component {
     if (num === 1) { this.setState({ type: 'alphabet' }); }
     else if (num === 2) { this.setState({ type: 'alphanumeric' }); }
     else { this.setState({ type: 'alphasymbol' }); }
-  
   }
+  
   /*
   copyToClipboard() {
     let password = this.state.password;
