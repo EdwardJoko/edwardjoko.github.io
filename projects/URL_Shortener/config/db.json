@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://NOTID:NOTPASSWORD@cluster0.jn7wp.mongodb.net/Url?retryWrites=true&w=majority"
+}

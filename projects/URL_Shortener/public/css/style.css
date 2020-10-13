@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500&display=swap');
+
+:root {
+  --background: #100340;
+  --text: #CEDAE7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--text) !important;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.UrlInput {
+  width: 500px !important;
+}
+
+table {
+  display: table !important;
+  width: 75% !important;
+  margin: 20px auto !important;
+  color: var(--text) !important;
+}
+
+.table thead th,
+.table tbody td {
+  min-width: 150px;
+  text-align: center;
+}
+
+a {
+  color: var(--text) !important;
+}
+
+.full-left {
+  text-align: left !important;
+}
+
+.hide {
+  display: none;
+  font-size: 17px;
+}
+
+.clicks {
+  text-align: center;
+}
+
+.copy-link, .copy-hello {
+  font-size: 17.5px;
+  width: 40px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  background-color: var(--background);
+  margin: 0 auto;
+}
+
+button { cursor: pointer; }
+
+button:active { font-size: 17px; }
+button:focus  { outline: 0; }
+
+.copy-link:hover, .copy-hello:hover {
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.container-404 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-404 {
+  text-align: left;
+}
+
+.bigger-404 {
+  font-size: 75px;
+}
+
+@media screen and (max-width: 1000px) {
+  .hide {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .form-inline {
+    flex-flow: row;
+  }
+
+  table {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .bigger-404 {
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .form-inline {
+    width: 100%;
+  }
+  
+  table {
+    margin: 20px 0 !important;
+  }
+}
