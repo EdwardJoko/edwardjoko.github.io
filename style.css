@@ -247,6 +247,11 @@ nav ul a:hover {
   margin-top: 10vh;
 }
 
+.about-icons a {
+  text-decoration: none;
+  color: var(--title);
+}
+
 
 /* SKILLS */                            
 #skills {                               
