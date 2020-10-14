@@ -7,17 +7,17 @@ class App extends React.Component {
     super(props);
     this.state = {
       clockIsRunning: false,
-      whichClock: 'Session',
-      sessionLength: 1500,
-      breakLength: 300,
-      sessionLengthDisplayed: 1500,
-      breakLengthDisplayed: 300,
+      whichClock: 'Work',
+      workDuration: 1500,
+      breakDuration: 300,
+      workDurationDisplayed: 1500,
+      breakDurationDisplayed: 300,
       displayedTime: 1500
     }
     this.handleStartPause = this.handleStartPause.bind(this);
     this.handleRefresh    = this.handleRefresh.bind(this);
-    this.sessionIncrement = this.sessionIncrement.bind(this);
-    this.sessionDecrement = this.sessionDecrement.bind(this);
+    this.workIncrement    = this.workIncrement.bind(this);
+    this.workDecrement    = this.workDecrement.bind(this);
     this.breakIncrement   = this.breakIncrement.bind(this);
     this.breakDecrement   = this.breakDecrement.bind(this);
     this.countDown        = this.countDown.bind(this);
@@ -32,40 +32,40 @@ class App extends React.Component {
   handleRefresh() {
     this.setState({
       clockIsRunning: false,
-      whichClock: 'Session',
-      sessionLength: 1500,
-      breakLength: 300,
-      sessionLengthDisplayed: 1500,
-      breakLengthDisplayed: 300,
+      whichClock: 'Work',
+      workDuration: 1500,
+      breakDuration: 300,
+      workDurationDisplayed: 1500,
+      breakDurationDisplayed: 300,
       displayedTime: 1500
     });
   }
   
-  sessionIncrement(time) {
+  workIncrement(time) {
     if (time < 3600) {
-      let sessionLength = time + 60;
+      let workDuration = time + 60;
       this.setState({
-        sessionLengthDisplayed: sessionLength,
-        sessionLength
+        workDurationDisplayed: workDuration,
+        workDuration
       });
-      if (this.state.whichClock === 'Session') {
+      if (this.state.whichClock === 'Work') {
         this.setState({
-          displayedTime: sessionLength
+          displayedTime: workDuration
         });
       }
     }
   }
   
-  sessionDecrement(time) {
+  workDecrement(time) {
     if (time > 60) {
-      let sessionLength = time - 60;
+      let workDuration = time - 60;
       this.setState({
-        sessionLengthDisplayed: sessionLength,
-        sessionLength
+        workDurationDisplayed: workDuration,
+        workDuration
       });
-      if (this.state.whichClock === 'Session') {
+      if (this.state.whichClock === 'Work') {
         this.setState({
-          displayedTime: sessionLength
+          displayedTime: workDuration
         });
       }
     }
@@ -73,14 +73,14 @@ class App extends React.Component {
   
   breakIncrement(time) {
     if (time < 3600) {
-      let breakLength = time + 60;
+      let breakDuration = time + 60;
       this.setState({
-        breakLengthDisplayed: breakLength,
-        breakLength
+        breakDurationDisplayed: breakDuration,
+        breakDuration
       });
       if (this.state.whichClock === 'Break') {
         this.setState({
-          displayedTime: breakLength
+          displayedTime: breakDuration
         });
       }
     }
@@ -88,14 +88,14 @@ class App extends React.Component {
   
   breakDecrement(time) {
     if (time > 60) {
-      let breakLength = time - 60;
+      let breakDuration = time - 60;
       this.setState({
-        breakLengthDisplayed: breakLength,
-        breakLength
+        breakDurationDisplayed: breakDuration,
+        breakDuration
       });
       if (this.state.whichClock === 'Break') {
         this.setState({
-          displayedTime: breakLength
+          displayedTime: breakDuration
         });
       }
     }
@@ -103,41 +103,41 @@ class App extends React.Component {
   
   countDown() {
     if (this.state.clockIsRunning) {
-      let sessionLength = this.state.sessionLengthDisplayed;
-      let breakLength = this.state.breakLengthDisplayed;
-      let whichClock = this.state.whichClock;
+      let workDuration  = this.state.workDurationDisplayed;
+      let breakDuration = this.state.breakDurationDisplayed;
+      let whichClock    = this.state.whichClock;
       
-      if (whichClock === 'Session') {
-        sessionLength -= 1;
-        if (sessionLength >= 0) {
+      if (whichClock === 'Work') {
+        workDuration -= 1;
+        if (workDuration >= 0) {
           this.setState({
-            sessionLengthDisplayed: sessionLength,
-            displayedTime: sessionLength
+            workDurationDisplayed: workDuration,
+            displayedTime: workDuration
           });
         } else {
           this.audioBeep.play();
-          sessionLength = this.state.sessionLength;
+          workDuration = this.state.workDuration;
           this.setState({
-            sessionLengthDisplayed: sessionLength,
-            displayedTime: breakLength,
+            workDurationDisplayed: workDuration,
+            displayedTime: breakDuration,
             whichClock: 'Break'
           });
         }
       }
       else {
-        breakLength -= 1;
-        if (breakLength >= 0) {
+        breakDuration -= 1;
+        if (breakDuration >= 0) {
           this.setState({
-            breakLengthDisplayed: breakLength,
-            displayedTime: breakLength
+            breakDurationDisplayed: breakDuration,
+            displayedTime: breakDuration
           });
         } else {
           this.audioBeep.play();
-          breakLength = this.state.breakLength;
+          breakDuration = this.state.breakDuration;
           this.setState({
-            breakLengthDisplayed: breakLength,
-            displayedTime: sessionLength,
-            whichClock: 'Session'
+            breakDurationDisplayed: breakDuration,
+            displayedTime: workDuration,
+            whichClock: 'Work'
           });
         }
       }
@@ -153,14 +153,14 @@ class App extends React.Component {
           whichClock={this.state.whichClock}
         />
         <Controller
-          sessionLength    ={this.state.sessionLength}
-          breakLength      ={this.state.breakLength}
-          onStartPause     ={this.handleStartPause}
-          onRefresh        ={this.handleRefresh}
-          sessionIncrement ={this.sessionIncrement}
-          sessionDecrement ={this.sessionDecrement}
-          breakIncrement   ={this.breakIncrement}
-          breakDecrement   ={this.breakDecrement}
+          workDuration     = {this.state.workDuration}
+          breakDuration    = {this.state.breakDuration}
+          onStartPause     = {this.handleStartPause}
+          onRefresh        = {this.handleRefresh}
+          workIncrement    = {this.workIncrement}
+          workDecrement    = {this.workDecrement}
+          breakIncrement   = {this.breakIncrement}
+          breakDecrement   = {this.breakDecrement}
         />
         <audio
           id="beep"
@@ -203,29 +203,29 @@ class Clock extends React.Component {
 
 class Controller extends React.Component {
   render() {
-    let sessionLength = this.props.sessionLength;
-    let breakLength   = this.props.breakLength;
+    let workDuration   = this.props.workDuration;
+    let breakDuration  = this.props.breakDuration;
     return (
       <div className="controller">
         <div className="increment-decrement">
           <div id="session-label">
-            <span className="session-break">Session</span>
+            <span className="session-break">Work</span>
             <div className="buttons">
               <button
                 id="session-increment"
                 onClick={ () => 
-                  this.props.sessionIncrement(sessionLength)
+                  this.props.workIncrement(workDuration)
                 }
               >
                 <i className="fa fa-chevron-up"/>
               </button>
               <div id="session-length">
-                {sessionLength / 60}
+                {workDuration / 60}
               </div>
               <button
                 id="session-decrement"
                 onClick={ () =>                             
-                  this.props.sessionDecrement(sessionLength)
+                  this.props.workDecrement(workDuration)
                 }                                           
               >
                 <i className="fa fa-chevron-down"/>
@@ -238,18 +238,18 @@ class Controller extends React.Component {
               <button
                 id="break-increment"
                 onClick={ () =>
-                  this.props.breakIncrement(breakLength)
+                  this.props.breakIncrement(breakDuration)
                 }
               >
                 <i className="fa fa-chevron-up"/>
               </button>
               <div id="break-length">
-                {breakLength / 60}
+                {breakDuration / 60}
               </div>
               <button
                 id="break-decrement"
                 onClick={ () =>                             
-                  this.props.breakDecrement(breakLength)
+                  this.props.breakDecrement(breakDuration)
                 }                                           
               >
                 <i className="fa fa-chevron-down"/>
