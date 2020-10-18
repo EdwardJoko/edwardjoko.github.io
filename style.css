@@ -33,8 +33,8 @@
   text-align: left;
   padding-top: 25vh;
   padding-left: 20vw;
-  z-index: 99;
-  animation: loading-animation 2s ease-out;
+  z-index: 109;
+  animation: loading-animation 3s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -95,7 +95,6 @@
 
 /* MAIN CONTENT */
 #main {
-  display: none;
   background-color: var(--background);
   overflow-x: hidden;
   position: relative;
@@ -126,16 +125,25 @@ nav {
   margin-left: 75px;
 }
 
-nav ul a {
+nav ul button {
   text-decoration: none;
   padding: 18px 25px;
   font-size: 22.5px;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  background-color: var(--background);
   font-weight: 400;
+  outline: 0;
+  border: none;
+  outline:none;
 }
 
-nav ul a:hover {
+nav ul button:active {
+  font-size: 22.5px;
+}
+
+
+nav ul button:hover {
   background-color: var(--hover);
   font-weight: 600;
 }
@@ -668,9 +676,10 @@ nav ul a:hover {
 .organization h1, .work h1 {
   font-size: 35px;
   padding-left: 50px;
-  margin: 10px 0;
   color: var(--title);
   font-family: 'Ubuntu', sans-serif;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 .work h1 {
@@ -678,7 +687,7 @@ nav ul a:hover {
 }
 
 .organization-exp ul li, .work-exp ul li {
-  font-size: 25px;
+  font-size: 22.5px;
   padding-bottom: 3px;
   cursor: default;
   max-width: 900px;

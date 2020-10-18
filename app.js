@@ -1,10 +1,21 @@
-// Showing the main content after the loading screen
-const main = document.getElementById('main');
+// Disabling scroll in loading screen
+function disableScroll() {
+  // Every realod it will drag the scroll to the top
+  window.onload = function() {
+    window.scrollTo(0, 0);
+  }
 
-function showMain() {
+  // disabling scroll while still loading
+  window.onscroll = function() {
+    window.scrollTo(0, 0);
+  } 
+} 
+
+// Enabling the scroll
+function enableScroll() {
   setTimeout(() => {
-    main.style.display = 'block';
-  }, 1250);
+    window.onscroll = function() {};
+  }, 2900);
 }
 
 // Removing the loading screen from html
@@ -13,8 +24,35 @@ const loading = document.getElementById("loading");
 function removeLoadingDiv() {
   setTimeout(() => {
     loading.parentNode.removeChild(loading);
-  }, 3000);
+  }, 4000);
 }
+
+
+// For Navbar
+document.getElementById('about-button').
+  addEventListener('click', () => {
+    window.scrollTo(0, 0);
+});
+
+document.getElementById('skill-button').
+  addEventListener('click', () => {
+    window.scrollTo(0, 610);
+});
+
+document.getElementById('project-button').
+  addEventListener('click', () => {
+    window.scrollTo(0, 1281);
+});
+
+document.getElementById('exp-button').
+  addEventListener('click', () => {
+    window.scrollTo(0, 1952);
+});
+
+document.getElementById('contact-button').
+  addEventListener('click', () => {
+    window.scrollTo(0, 2623);
+});
 
 
 // For slider in Projects section
@@ -140,11 +178,11 @@ function navSlide() {
 
 
 
-
 // Run the all functions
 const app = () => {
   // Loading screen process
-  showMain();
+  disableScroll();
+  enableScroll();
   removeLoadingDiv();
   // Enabling slider in project section
   startSlide();
@@ -153,3 +191,4 @@ const app = () => {
 }
 
 app();
+
