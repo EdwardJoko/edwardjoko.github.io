@@ -4,7 +4,7 @@ const main = document.getElementById('main');
 function showMain() {
   setTimeout(() => {
     main.style.display = 'block';
-  }, 1500);
+  }, 1250);
 }
 
 // Removing the loading screen from html
