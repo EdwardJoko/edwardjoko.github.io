@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
@@ -22,7 +22,7 @@
   color: white;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: var(--background);
@@ -97,6 +97,7 @@
 #main {
   background-color: var(--background);
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   top: 0;
   left: 0;
@@ -142,10 +143,9 @@ nav ul button:active {
   font-size: 22.5px;
 }
 
-
 nav ul button:hover {
   background-color: var(--hover);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* For title in every section */
@@ -678,7 +678,7 @@ nav ul button:hover {
   padding-left: 50px;
   color: var(--title);
   font-family: 'Ubuntu', sans-serif;
-  margin-top: -10px;
+  margin-top: -5px;
   margin-bottom: 10px;
 }
 
@@ -886,16 +886,19 @@ button:focus {
   .skills-container .skill:hover > .html-effect-left {
     display: none;
   }
+
   .html-effect, .css-effect, .bootstrap-effect, .js-effect,
   .sass-effect, .react-effect, .redux-effect,
   .python-effect, .git-effect, .corel-effect {
     display: none;
     opacity: 0;
   }
+  
   .sm-skill, .skill-arrow-special,
   .skills-container .sm-skill:hover > .skills-inprogress {
     display: none;
   }
+  
   .skill-special:hover {
     color: var(--text);
     background-color: var(--background);
@@ -969,7 +972,7 @@ button:focus {
     transition: transform 0.3s ease-in;
   }
 
-  nav ul a {
+  nav ul button {
     text-decoration: none;
     padding: 18px 17.5px;
     font-size: 17.5px;
@@ -1162,3 +1165,4 @@ button:focus {
 
   #copied { margin: 5% auto; }
 }
+

@@ -1,22 +1,9 @@
-// Disabling scroll in loading screen
-function disableScroll() {
-  // Every realod it will drag the scroll to the top
+// Every realod it will drag the scroll to the top
+function scrollToTheTop() {
   window.onload = function() {
     window.scrollTo(0, 0);
   }
-
-  // disabling scroll while still loading
-  window.onscroll = function() {
-    window.scrollTo(0, 0);
-  } 
 } 
-
-// Enabling the scroll
-function enableScroll() {
-  setTimeout(() => {
-    window.onscroll = function() {};
-  }, 2900);
-}
 
 // Removing the loading screen from html
 const loading = document.getElementById("loading");
@@ -31,27 +18,27 @@ function removeLoadingDiv() {
 // For Navbar
 document.getElementById('about-button').
   addEventListener('click', () => {
-    window.scrollTo(0, 0);
+    document.getElementById('about').scrollIntoView();
 });
 
 document.getElementById('skill-button').
   addEventListener('click', () => {
-    window.scrollTo(0, 610);
+    document.getElementById('skills').scrollIntoView();
 });
 
 document.getElementById('project-button').
   addEventListener('click', () => {
-    window.scrollTo(0, 1281);
+    document.getElementById('projects').scrollIntoView();
 });
 
 document.getElementById('exp-button').
   addEventListener('click', () => {
-    window.scrollTo(0, 1952);
+    document.getElementById('experiences').scrollIntoView();
 });
 
 document.getElementById('contact-button').
   addEventListener('click', () => {
-    window.scrollTo(0, 2623);
+    document.getElementById('contact').scrollIntoView();
 });
 
 
@@ -181,8 +168,7 @@ function navSlide() {
 // Run the all functions
 const app = () => {
   // Loading screen process
-  disableScroll();
-  enableScroll();
+  scrollToTheTop();
   removeLoadingDiv();
   // Enabling slider in project section
   startSlide();
