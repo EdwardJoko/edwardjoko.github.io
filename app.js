@@ -131,23 +131,10 @@ function copiedToClipboard() {
   }, 1500);
 }
 
-function copyEmail() {
-  copiedToClipboard();
+copy_email.addEventListener('click', () => copiedToClipboard());
+copy_number.addEventListener('click', () => copiedToClipboard());
 
-  let email = document.querySelector('.email_string').textContent;
-  navigator.clipboard.writeText(email);
-}
-
-copy_email.addEventListener('click', () => copyEmail());
-
-function copyNumber() {
-  copiedToClipboard();
-
-  let number = document.querySelector('.number_string').textContent;
-  navigator.clipboard.writeText(number);
-}
-
-copy_number.addEventListener('click', () => copyNumber());
+new ClipboardJS('#copying');
 
 
 // For the NavBar in small screen
@@ -162,7 +149,6 @@ function navSlide() {
     nav.classList.toggle('nav-active');
   });
 }
-
 
 
 // Run the all functions
