@@ -1,9 +1,10 @@
-// Every realod it will drag the scroll to the top
+// Every reload it will drag the scroll to the top
 function scrollToTheTop() {
   window.onload = function() {
     window.scrollTo(0, 0);
   }
 } 
+
 
 // Removing the loading screen from html
 const loading = document.getElementById("loading");
@@ -131,10 +132,9 @@ function copiedToClipboard() {
   }, 1500);
 }
 
+new ClipboardJS('.address-icon');
 copy_email.addEventListener('click', () => copiedToClipboard());
 copy_number.addEventListener('click', () => copiedToClipboard());
-
-new ClipboardJS('#copying');
 
 
 // For the NavBar in small screen
@@ -152,7 +152,7 @@ function navSlide() {
 
 
 // Run the all functions
-const app = () => {
+function app() {
   // Loading screen process
   scrollToTheTop();
   removeLoadingDiv();
