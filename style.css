@@ -63,3 +63,17 @@
 .box a:hover {
   color: var(--title);
 }
+
+@media screen and (max-width: 700px) {
+  .first-page h2 {
+    font-size: 20px;
+  }
+  .box {
+    width: 165px;
+    height: 60px;
+    font-size: 16.5px;
+  }
+  .box a {
+    font-size: 16.5px;
+  }
+}
