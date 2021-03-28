@@ -105,6 +105,7 @@ nav .nav-link a {
 
   nav {
     height: 12.5vh;
+    position: relative;
   }
 
   nav .logo-tagline {
