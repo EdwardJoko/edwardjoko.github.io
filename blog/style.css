@@ -20,8 +20,8 @@ nav {
   color: white;
   width: 100%;
   height: 14vh;
-  background-color: #112845;
   display: flex;
+  background-color: #112845;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -69,8 +69,8 @@ nav .nav-link a {
   color: white;
   width: 100%;
   height: 100vh;
-  background-color: var(--background);
   display: flex;
+  background-color: var(--background);
   justify-content: center;
   align-items: center;
   flex-direction: column;
