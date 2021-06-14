@@ -5,8 +5,15 @@ const Url    = require('../models/Url');
 const Clicks = require('../models/helloClick');
 
 router.get('/', async (req, res) => {
-  const Urls   = await Url.find();
+  const urls   = await Url.find();
   const clicks = await Clicks.findOne({ short: "hello" });
+
+  // if clicks is null, then create one
+  if (!clicks) {
+    Clicks.create({
+      short: "hello"
+    });
+  }
 
   res.render('index', { Urls: Urls, Clicks: clicks });
 });
