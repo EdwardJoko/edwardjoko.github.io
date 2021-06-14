@@ -49,6 +49,9 @@ a {
 
 .full-left {
   text-align: left !important;
+  white-space: nowrap;
+  max-width: 500px;
+  overflow: hidden;
 }
 
 .hide {
