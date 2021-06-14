@@ -13,7 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -44,13 +44,13 @@ nav .logo-tagline .logo img {
 }
 
 nav .logo-tagline h2 {
-  font-size: 26.5px;
+  font-size: 22.5px;
   font-weight: 400;
 }
 
 nav .logo-tagline p {
   margin-top: 7.5px;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 
 nav .nav-link {
@@ -90,6 +90,8 @@ nav .nav-link a {
 
 .blog-page h2 {
   margin: 25px auto;
+  font-weight: normal;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 950px) {
